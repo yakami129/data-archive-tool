@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.skyjun.datamigration.target.mapper.ItsmProcessModelTargetMapper">
+
+    <resultMap id="BaseResultMap" type="com.skyjun.datamigration.target.entity.ItsmProcessModelTarget">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="actPid" column="act_pid" jdbcType="VARCHAR"/>
+            <result property="proName" column="pro_name" jdbcType="VARCHAR"/>
+            <result property="proDescribe" column="pro_describe" jdbcType="VARCHAR"/>
+            <result property="proIsEnabled" column="pro_is_enabled" jdbcType="BIGINT"/>
+            <result property="proCreateId" column="pro_create_id" jdbcType="BIGINT"/>
+            <result property="proCreateName" column="pro_create_name" jdbcType="VARCHAR"/>
+            <result property="builtIn" column="built_In" jdbcType="BIGINT"/>
+            <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+            <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+            <result property="bpmn" column="bpmn" jdbcType="VARCHAR"/>
+            <result property="bpmnViewType" column="bpmn_view_type" jdbcType="VARCHAR"/>
+            <result property="configuration" column="configuration" jdbcType="VARCHAR"/>
+            <result property="hiStatus" column="hi_status" jdbcType="BIGINT"/>
+            <result property="proType" column="pro_type" jdbcType="VARCHAR"/>
+            <result property="moveconfig" column="moveconfig" jdbcType="BIGINT"/>
+            <result property="historyGroup" column="history_group" jdbcType="VARCHAR"/>
+            <result property="version" column="version" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,act_pid,pro_name,
+        pro_describe,pro_is_enabled,pro_create_id,
+        pro_create_name,built_In,create_date,
+        update_date,bpmn,bpmn_view_type,
+        configuration,hi_status,pro_type,
+        moveconfig,history_group,version
+    </sql>
+</mapper>

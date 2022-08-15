@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    dynamic:
+      primary: source #设置默认的数据源或者数据源组,默认值即为master
+      strict: true #设置严格模式,默认false不启动. 启动后在未匹配到指定数据源时候回抛出异常,不启动会使用默认数据源.
+      datasource:
+        source:
+          url: jdbc:mysql://192.168.3.15:3306/itsmboot-yzj-811
+          username: root
+          password: 123qweASD
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        target:
+          url: jdbc:mysql://192.168.3.15:3306/itsmboot-yzj-zyj
+          username: root
+          password: 123qweASD
+          driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+datamigration:
+  pagesize: 1000
+
+mybatis-plus:
+  mapper-locations: classpath:source/mapper/*.xml,classpath:target/mapper/*.xml

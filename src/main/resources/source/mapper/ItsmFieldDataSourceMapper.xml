@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.skyjun.datamigration.source.mapper.ItsmFieldDataSourceMapper">
+
+    <resultMap id="BaseResultMap" type="com.skyjun.datamigration.source.entity.ItsmFieldDataSource">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="serviceDirectoryId" column="service_directory_id" jdbcType="BIGINT"/>
+            <result property="serviceItemId" column="service_item_id" jdbcType="BIGINT"/>
+            <result property="itsmWorkId" column="itsm_work_id" jdbcType="BIGINT"/>
+            <result property="proModelId" column="pro_model_id" jdbcType="BIGINT"/>
+            <result property="actPid" column="act_pid" jdbcType="VARCHAR"/>
+            <result property="itsmTaskId" column="itsm_task_id" jdbcType="BIGINT"/>
+            <result property="itsmFieidModelId" column="itsm_fieid_model_id" jdbcType="BIGINT"/>
+            <result property="itsmFieidNum" column="itsm_fieid_num" jdbcType="VARCHAR"/>
+            <result property="itsmFieidName" column="itsm_fieid_name" jdbcType="VARCHAR"/>
+            <result property="itsmOperatorId" column="itsm_operator_id" jdbcType="BIGINT"/>
+            <result property="itsmOperatorName" column="itsm_operator_name" jdbcType="VARCHAR"/>
+            <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+            <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+            <result property="itsmFieidVal" column="itsm_fieid_val" jdbcType="VARCHAR"/>
+            <result property="actTaskId" column="act_task_id" jdbcType="VARCHAR"/>
+            <result property="hiStatus" column="hi_status" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,service_directory_id,service_item_id,
+        itsm_work_id,pro_model_id,act_pid,
+        itsm_task_id,itsm_fieid_model_id,itsm_fieid_num,
+        itsm_fieid_name,itsm_operator_id,itsm_operator_name,
+        create_date,update_date,itsm_fieid_val,
+        act_task_id,hi_status
+    </sql>
+</mapper>
