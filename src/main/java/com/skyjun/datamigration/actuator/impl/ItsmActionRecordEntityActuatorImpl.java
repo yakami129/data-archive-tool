@@ -2,6 +2,7 @@ package com.skyjun.datamigration.actuator.impl;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.skyjun.datamigration.actuator.AbstractDataEntityActuator;
+import com.skyjun.datamigration.common.PrimarykeyConstants;
 import com.skyjun.datamigration.core.CustomBaseMapper;
 import com.skyjun.datamigration.source.entity.ItsmActionRecordSource;
 import com.skyjun.datamigration.source.service.ItsmActionRecordSourceService;
@@ -46,6 +47,7 @@ public class ItsmActionRecordEntityActuatorImpl extends AbstractDataEntityActuat
     @Override
     protected ItsmActionRecordTarget convert(ItsmActionRecordSource itsmActionRecordSource, Class<ItsmActionRecordTarget> clazz) {
         ItsmActionRecordTarget convert = super.convert(itsmActionRecordSource, clazz);
+        convert.setId(PrimarykeyConstants.generatePrimarykey(convert.getId()));
         convert.setSource(false);
         return convert;
     }

@@ -2,6 +2,7 @@ package com.skyjun.datamigration.actuator.impl;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.skyjun.datamigration.actuator.AbstractDataEntityActuator;
+import com.skyjun.datamigration.common.PrimarykeyConstants;
 import com.skyjun.datamigration.core.CustomBaseMapper;
 import com.skyjun.datamigration.source.entity.ItsmServiceTypeSource;
 import com.skyjun.datamigration.source.service.ItsmServiceTypeSourceService;
@@ -41,5 +42,12 @@ public class ItsmServiceTypeEntityActuatorImpl extends AbstractDataEntityActuato
     @Override
     public CustomBaseMapper<ItsmServiceTypeTarget> getTargetMapper() {
         return itsmServiceTypeTargetMapper;
+    }
+
+    @Override
+    protected ItsmServiceTypeTarget convert(ItsmServiceTypeSource itsmServiceTypeSource, Class<ItsmServiceTypeTarget> clazz) {
+        ItsmServiceTypeTarget convert = super.convert(itsmServiceTypeSource, clazz);
+        convert.setId(PrimarykeyConstants.generatePrimarykey(convert.getId()));
+        return convert;
     }
 }

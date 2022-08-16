@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.skyjun.datamigration.actuator.AbstractDataEntityActuator;
+import com.skyjun.datamigration.common.PrimarykeyConstants;
 import com.skyjun.datamigration.core.CustomBaseMapper;
 import com.skyjun.datamigration.source.entity.ItsmServiceWorkListSource;
 import com.skyjun.datamigration.source.service.ItsmServiceWorkListSourceService;
@@ -56,5 +57,12 @@ public class ItsmServiceWorkListEntityActuatorImpl extends AbstractDataEntityAct
         return Wrappers
                 .lambdaQuery(ItsmServiceWorkListTarget.class)
                 .eq(ItsmServiceWorkListTarget::getHiStatus, 0L);
+    }
+
+    @Override
+    protected ItsmServiceWorkListTarget convert(ItsmServiceWorkListSource itsmServiceWorkListSource, Class<ItsmServiceWorkListTarget> clazz) {
+        ItsmServiceWorkListTarget convert = super.convert(itsmServiceWorkListSource, clazz);
+        convert.setId(PrimarykeyConstants.generatePrimarykey(convert.getId()));
+        return convert;
     }
 }

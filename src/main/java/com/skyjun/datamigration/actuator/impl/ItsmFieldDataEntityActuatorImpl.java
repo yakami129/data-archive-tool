@@ -3,6 +3,7 @@ package com.skyjun.datamigration.actuator.impl;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.skyjun.datamigration.actuator.AbstractDataEntityActuator;
 import com.skyjun.datamigration.common.PersonComponent;
+import com.skyjun.datamigration.common.PrimarykeyConstants;
 import com.skyjun.datamigration.core.CustomBaseMapper;
 import com.skyjun.datamigration.source.entity.ItsmFieldDataSource;
 import com.skyjun.datamigration.source.service.ItsmFieldDataSourceService;
@@ -50,6 +51,7 @@ public class ItsmFieldDataEntityActuatorImpl extends AbstractDataEntityActuator<
     @Override
     protected ItsmFieldDataTarget convert(ItsmFieldDataSource itsmFieldDataSource, Class<ItsmFieldDataTarget> clazz) {
         ItsmFieldDataTarget convert = super.convert(itsmFieldDataSource, clazz);
+        convert.setId(PrimarykeyConstants.generatePrimarykey(convert.getId()));
         ItsmPersonTarget targetPerson = personComponent.getTargetPerson(convert.getItsmOperatorId());
         if (Objects.nonNull(targetPerson)) {
             convert.setItsmOperatorId(targetPerson.getItsmId());
