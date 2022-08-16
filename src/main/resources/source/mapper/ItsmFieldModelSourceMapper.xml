@@ -5,21 +5,21 @@
 <mapper namespace="com.skyjun.datamigration.source.mapper.ItsmFieldModelSourceMapper">
 
     <resultMap id="BaseResultMap" type="com.skyjun.datamigration.source.entity.ItsmFieldModelSource">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="actPid" column="act_pid" jdbcType="BIGINT"/>
-            <result property="itsmTaskId" column="itsm_task_id" jdbcType="BIGINT"/>
-            <result property="itsmFieidId" column="itsm_fieid_id" jdbcType="BIGINT"/>
-            <result property="itsmFieidName" column="itsm_fieid_name" jdbcType="VARCHAR"/>
-            <result property="itsmFieidNum" column="itsm_fieid_num" jdbcType="VARCHAR"/>
-            <result property="itsmFieidControlType" column="itsm_fieid_control_type" jdbcType="VARCHAR"/>
-            <result property="itsmFieidModelIsreadable" column="itsm_fieid_model_isReadable" jdbcType="BIGINT"/>
-            <result property="itsmFieidModelIswrite" column="itsm_fieid_model_isWrite" jdbcType="BIGINT"/>
-            <result property="itsmFieidModelIsmust" column="itsm_fieid_model_isMust" jdbcType="BIGINT"/>
-            <result property="itsmProperty" column="itsm_property" jdbcType="BIGINT"/>
-            <result property="layoutPosition" column="layout_position" jdbcType="BIGINT"/>
-            <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
-            <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
-            <result property="h5Hide" column="h5_hide" jdbcType="BOOLEAN"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="actPid" column="act_pid" jdbcType="BIGINT"/>
+        <result property="itsmTaskId" column="itsm_task_id" jdbcType="BIGINT"/>
+        <result property="itsmFieidId" column="itsm_fieid_id" jdbcType="BIGINT"/>
+        <result property="itsmFieidName" column="itsm_fieid_name" jdbcType="VARCHAR"/>
+        <result property="itsmFieidNum" column="itsm_fieid_num" jdbcType="VARCHAR"/>
+        <result property="itsmFieidControlType" column="itsm_fieid_control_type" jdbcType="VARCHAR"/>
+        <result property="itsmFieidModelIsreadable" column="itsm_fieid_model_isReadable" jdbcType="BIGINT"/>
+        <result property="itsmFieidModelIswrite" column="itsm_fieid_model_isWrite" jdbcType="BIGINT"/>
+        <result property="itsmFieidModelIsmust" column="itsm_fieid_model_isMust" jdbcType="BIGINT"/>
+        <result property="itsmProperty" column="itsm_property" jdbcType="BIGINT"/>
+        <result property="layoutPosition" column="layout_position" jdbcType="BIGINT"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+        <result property="h5Hide" column="h5_hide" jdbcType="BOOLEAN"/>
     </resultMap>
 
     <sql id="Base_Column_List">

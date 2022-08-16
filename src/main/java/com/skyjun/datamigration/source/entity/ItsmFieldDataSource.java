@@ -4,113 +4,96 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 
  * @TableName itsm_field_data
  */
-@TableName(value ="itsm_field_data")
+@TableName(value = "itsm_field_data")
 public class ItsmFieldDataSource implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
      * 服务目录ID
      */
     private Long serviceDirectoryId;
-
     /**
      * 服务项Id
      */
     private Long serviceItemId;
-
     /**
      * 工单ID
      */
     private Long itsmWorkId;
-
     /**
      * 流程模型ID
      */
     private Long proModelId;
-
     /**
      * 流程ID
      */
     private String actPid;
-
     /**
      * 任务ID
      */
     private Long itsmTaskId;
-
     /**
      * 字段模板ID
      */
     private Long itsmFieidModelId;
-
     /**
      * 字段编号
      */
     private String itsmFieidNum;
-
     /**
      * 字段名称
      */
     private String itsmFieidName;
-
     /**
      * 操作人ID
      */
     private Long itsmOperatorId;
-
     /**
      * 操作人名称
      */
     private String itsmOperatorName;
-
     /**
-     * 
+     *
      */
     private Date createDate;
-
     /**
-     * 
+     *
      */
     private Date updateDate;
-
     /**
-     * 
+     *
      */
     private String itsmFieidVal;
-
     /**
      * ACT任务名称
      */
     private String actTaskId;
-
     /**
      * 是否是历史记录，1：是，0：否
      */
     private Long hiStatus;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
@@ -271,42 +254,42 @@ public class ItsmFieldDataSource implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Date getCreateDate() {
         return createDate;
     }
 
     /**
-     * 
+     *
      */
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
     /**
-     * 
+     *
      */
     public Date getUpdateDate() {
         return updateDate;
     }
 
     /**
-     * 
+     *
      */
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
     }
 
     /**
-     * 
+     *
      */
     public String getItsmFieidVal() {
         return itsmFieidVal;
     }
 
     /**
-     * 
+     *
      */
     public void setItsmFieidVal(String itsmFieidVal) {
         this.itsmFieidVal = itsmFieidVal;
@@ -353,22 +336,22 @@ public class ItsmFieldDataSource implements Serializable {
         }
         ItsmFieldDataSource other = (ItsmFieldDataSource) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getServiceDirectoryId() == null ? other.getServiceDirectoryId() == null : this.getServiceDirectoryId().equals(other.getServiceDirectoryId()))
-            && (this.getServiceItemId() == null ? other.getServiceItemId() == null : this.getServiceItemId().equals(other.getServiceItemId()))
-            && (this.getItsmWorkId() == null ? other.getItsmWorkId() == null : this.getItsmWorkId().equals(other.getItsmWorkId()))
-            && (this.getProModelId() == null ? other.getProModelId() == null : this.getProModelId().equals(other.getProModelId()))
-            && (this.getActPid() == null ? other.getActPid() == null : this.getActPid().equals(other.getActPid()))
-            && (this.getItsmTaskId() == null ? other.getItsmTaskId() == null : this.getItsmTaskId().equals(other.getItsmTaskId()))
-            && (this.getItsmFieidModelId() == null ? other.getItsmFieidModelId() == null : this.getItsmFieidModelId().equals(other.getItsmFieidModelId()))
-            && (this.getItsmFieidNum() == null ? other.getItsmFieidNum() == null : this.getItsmFieidNum().equals(other.getItsmFieidNum()))
-            && (this.getItsmFieidName() == null ? other.getItsmFieidName() == null : this.getItsmFieidName().equals(other.getItsmFieidName()))
-            && (this.getItsmOperatorId() == null ? other.getItsmOperatorId() == null : this.getItsmOperatorId().equals(other.getItsmOperatorId()))
-            && (this.getItsmOperatorName() == null ? other.getItsmOperatorName() == null : this.getItsmOperatorName().equals(other.getItsmOperatorName()))
-            && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
-            && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
-            && (this.getItsmFieidVal() == null ? other.getItsmFieidVal() == null : this.getItsmFieidVal().equals(other.getItsmFieidVal()))
-            && (this.getActTaskId() == null ? other.getActTaskId() == null : this.getActTaskId().equals(other.getActTaskId()))
-            && (this.getHiStatus() == null ? other.getHiStatus() == null : this.getHiStatus().equals(other.getHiStatus()));
+                && (this.getServiceDirectoryId() == null ? other.getServiceDirectoryId() == null : this.getServiceDirectoryId().equals(other.getServiceDirectoryId()))
+                && (this.getServiceItemId() == null ? other.getServiceItemId() == null : this.getServiceItemId().equals(other.getServiceItemId()))
+                && (this.getItsmWorkId() == null ? other.getItsmWorkId() == null : this.getItsmWorkId().equals(other.getItsmWorkId()))
+                && (this.getProModelId() == null ? other.getProModelId() == null : this.getProModelId().equals(other.getProModelId()))
+                && (this.getActPid() == null ? other.getActPid() == null : this.getActPid().equals(other.getActPid()))
+                && (this.getItsmTaskId() == null ? other.getItsmTaskId() == null : this.getItsmTaskId().equals(other.getItsmTaskId()))
+                && (this.getItsmFieidModelId() == null ? other.getItsmFieidModelId() == null : this.getItsmFieidModelId().equals(other.getItsmFieidModelId()))
+                && (this.getItsmFieidNum() == null ? other.getItsmFieidNum() == null : this.getItsmFieidNum().equals(other.getItsmFieidNum()))
+                && (this.getItsmFieidName() == null ? other.getItsmFieidName() == null : this.getItsmFieidName().equals(other.getItsmFieidName()))
+                && (this.getItsmOperatorId() == null ? other.getItsmOperatorId() == null : this.getItsmOperatorId().equals(other.getItsmOperatorId()))
+                && (this.getItsmOperatorName() == null ? other.getItsmOperatorName() == null : this.getItsmOperatorName().equals(other.getItsmOperatorName()))
+                && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
+                && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
+                && (this.getItsmFieidVal() == null ? other.getItsmFieidVal() == null : this.getItsmFieidVal().equals(other.getItsmFieidVal()))
+                && (this.getActTaskId() == null ? other.getActTaskId() == null : this.getActTaskId().equals(other.getActTaskId()))
+                && (this.getHiStatus() == null ? other.getHiStatus() == null : this.getHiStatus().equals(other.getHiStatus()));
     }
 
     @Override

@@ -4,138 +4,114 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 
  * @TableName itsm_field
  */
-@TableName(value ="itsm_field")
+@TableName(value = "itsm_field")
 public class ItsmFieldSource implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
      * ID
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
      * 字段编号
      */
     private String fieldNum;
-
     /**
      * 字段名称
      */
     private String fieldName;
-
     /**
      * 字段数据类型
      */
     private String fieldDataType;
-
     /**
      * 控件名称
      */
     private String fieldControlName;
-
     /**
      * 字段控件类型
      */
     private String fieldControlType;
-
     /**
      * 字段默认值
      */
     private String fieldDefaultValue;
-
     /**
      * 字段扩展属性（JSON）
      */
     private String fieldExtendJson;
-
     /**
      * 字段扩展URL
      */
     private String fieldExtendUrl;
-
     /**
-     * 
+     *
      */
     private Date createDate;
-
     /**
-     * 
+     *
      */
     private Date updateDate;
-
     /**
      * ico
      */
     private String fieldIco;
-
     /**
      * 文本最大长度，整数最大值，浮点数最大值
      */
     private Double fieldMax;
-
     /**
-     * 
+     *
      */
     private Double fieldMin;
-
     /**
      * 保留几位小数
      */
     private Long fieldRetainedDecimal;
-
     /**
-     * 
+     *
      */
     private String fieldCompany;
-
     /**
      * 是否仅日期
      */
     private Long fieldIsDateOnly;
-
     /**
      * 是否为内置字段
      */
     private Long fieldIsBuiltin;
-
     /**
-     * 
+     *
      */
     private String configuration;
-
     /**
      * 下拉菜单配置
      */
     private String selectConfig;
-
     /**
-     * 内置字段是否可以修改 0：否  1：是 
+     * 内置字段是否可以修改 0：否  1：是
      */
     private Long isUpdate;
-
     /**
-     * 系统字段 0：否  1：是 
+     * 系统字段 0：否  1：是
      */
     private Long sysField;
-
     /**
      * 字段描述
      */
     private String remark;
-
     /**
-     * 内置字段是否可以修改 0：不需要  1：需要 
+     * 内置字段是否可以修改 0：不需要  1：需要
      */
     private Long needRequest;
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 
     /**
      * ID
@@ -264,28 +240,28 @@ public class ItsmFieldSource implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Date getCreateDate() {
         return createDate;
     }
 
     /**
-     * 
+     *
      */
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
     /**
-     * 
+     *
      */
     public Date getUpdateDate() {
         return updateDate;
     }
 
     /**
-     * 
+     *
      */
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
@@ -320,14 +296,14 @@ public class ItsmFieldSource implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Double getFieldMin() {
         return fieldMin;
     }
 
     /**
-     * 
+     *
      */
     public void setFieldMin(Double fieldMin) {
         this.fieldMin = fieldMin;
@@ -348,14 +324,14 @@ public class ItsmFieldSource implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public String getFieldCompany() {
         return fieldCompany;
     }
 
     /**
-     * 
+     *
      */
     public void setFieldCompany(String fieldCompany) {
         this.fieldCompany = fieldCompany;
@@ -390,14 +366,14 @@ public class ItsmFieldSource implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public String getConfiguration() {
         return configuration;
     }
 
     /**
-     * 
+     *
      */
     public void setConfiguration(String configuration) {
         this.configuration = configuration;
@@ -418,28 +394,28 @@ public class ItsmFieldSource implements Serializable {
     }
 
     /**
-     * 内置字段是否可以修改 0：否  1：是 
+     * 内置字段是否可以修改 0：否  1：是
      */
     public Long getIsUpdate() {
         return isUpdate;
     }
 
     /**
-     * 内置字段是否可以修改 0：否  1：是 
+     * 内置字段是否可以修改 0：否  1：是
      */
     public void setIsUpdate(Long isUpdate) {
         this.isUpdate = isUpdate;
     }
 
     /**
-     * 系统字段 0：否  1：是 
+     * 系统字段 0：否  1：是
      */
     public Long getSysField() {
         return sysField;
     }
 
     /**
-     * 系统字段 0：否  1：是 
+     * 系统字段 0：否  1：是
      */
     public void setSysField(Long sysField) {
         this.sysField = sysField;
@@ -460,14 +436,14 @@ public class ItsmFieldSource implements Serializable {
     }
 
     /**
-     * 内置字段是否可以修改 0：不需要  1：需要 
+     * 内置字段是否可以修改 0：不需要  1：需要
      */
     public Long getNeedRequest() {
         return needRequest;
     }
 
     /**
-     * 内置字段是否可以修改 0：不需要  1：需要 
+     * 内置字段是否可以修改 0：不需要  1：需要
      */
     public void setNeedRequest(Long needRequest) {
         this.needRequest = needRequest;
@@ -486,29 +462,29 @@ public class ItsmFieldSource implements Serializable {
         }
         ItsmFieldSource other = (ItsmFieldSource) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getFieldNum() == null ? other.getFieldNum() == null : this.getFieldNum().equals(other.getFieldNum()))
-            && (this.getFieldName() == null ? other.getFieldName() == null : this.getFieldName().equals(other.getFieldName()))
-            && (this.getFieldDataType() == null ? other.getFieldDataType() == null : this.getFieldDataType().equals(other.getFieldDataType()))
-            && (this.getFieldControlName() == null ? other.getFieldControlName() == null : this.getFieldControlName().equals(other.getFieldControlName()))
-            && (this.getFieldControlType() == null ? other.getFieldControlType() == null : this.getFieldControlType().equals(other.getFieldControlType()))
-            && (this.getFieldDefaultValue() == null ? other.getFieldDefaultValue() == null : this.getFieldDefaultValue().equals(other.getFieldDefaultValue()))
-            && (this.getFieldExtendJson() == null ? other.getFieldExtendJson() == null : this.getFieldExtendJson().equals(other.getFieldExtendJson()))
-            && (this.getFieldExtendUrl() == null ? other.getFieldExtendUrl() == null : this.getFieldExtendUrl().equals(other.getFieldExtendUrl()))
-            && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
-            && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
-            && (this.getFieldIco() == null ? other.getFieldIco() == null : this.getFieldIco().equals(other.getFieldIco()))
-            && (this.getFieldMax() == null ? other.getFieldMax() == null : this.getFieldMax().equals(other.getFieldMax()))
-            && (this.getFieldMin() == null ? other.getFieldMin() == null : this.getFieldMin().equals(other.getFieldMin()))
-            && (this.getFieldRetainedDecimal() == null ? other.getFieldRetainedDecimal() == null : this.getFieldRetainedDecimal().equals(other.getFieldRetainedDecimal()))
-            && (this.getFieldCompany() == null ? other.getFieldCompany() == null : this.getFieldCompany().equals(other.getFieldCompany()))
-            && (this.getFieldIsDateOnly() == null ? other.getFieldIsDateOnly() == null : this.getFieldIsDateOnly().equals(other.getFieldIsDateOnly()))
-            && (this.getFieldIsBuiltin() == null ? other.getFieldIsBuiltin() == null : this.getFieldIsBuiltin().equals(other.getFieldIsBuiltin()))
-            && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
-            && (this.getSelectConfig() == null ? other.getSelectConfig() == null : this.getSelectConfig().equals(other.getSelectConfig()))
-            && (this.getIsUpdate() == null ? other.getIsUpdate() == null : this.getIsUpdate().equals(other.getIsUpdate()))
-            && (this.getSysField() == null ? other.getSysField() == null : this.getSysField().equals(other.getSysField()))
-            && (this.getRemark() == null ? other.getRemark() == null : this.getRemark().equals(other.getRemark()))
-            && (this.getNeedRequest() == null ? other.getNeedRequest() == null : this.getNeedRequest().equals(other.getNeedRequest()));
+                && (this.getFieldNum() == null ? other.getFieldNum() == null : this.getFieldNum().equals(other.getFieldNum()))
+                && (this.getFieldName() == null ? other.getFieldName() == null : this.getFieldName().equals(other.getFieldName()))
+                && (this.getFieldDataType() == null ? other.getFieldDataType() == null : this.getFieldDataType().equals(other.getFieldDataType()))
+                && (this.getFieldControlName() == null ? other.getFieldControlName() == null : this.getFieldControlName().equals(other.getFieldControlName()))
+                && (this.getFieldControlType() == null ? other.getFieldControlType() == null : this.getFieldControlType().equals(other.getFieldControlType()))
+                && (this.getFieldDefaultValue() == null ? other.getFieldDefaultValue() == null : this.getFieldDefaultValue().equals(other.getFieldDefaultValue()))
+                && (this.getFieldExtendJson() == null ? other.getFieldExtendJson() == null : this.getFieldExtendJson().equals(other.getFieldExtendJson()))
+                && (this.getFieldExtendUrl() == null ? other.getFieldExtendUrl() == null : this.getFieldExtendUrl().equals(other.getFieldExtendUrl()))
+                && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
+                && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
+                && (this.getFieldIco() == null ? other.getFieldIco() == null : this.getFieldIco().equals(other.getFieldIco()))
+                && (this.getFieldMax() == null ? other.getFieldMax() == null : this.getFieldMax().equals(other.getFieldMax()))
+                && (this.getFieldMin() == null ? other.getFieldMin() == null : this.getFieldMin().equals(other.getFieldMin()))
+                && (this.getFieldRetainedDecimal() == null ? other.getFieldRetainedDecimal() == null : this.getFieldRetainedDecimal().equals(other.getFieldRetainedDecimal()))
+                && (this.getFieldCompany() == null ? other.getFieldCompany() == null : this.getFieldCompany().equals(other.getFieldCompany()))
+                && (this.getFieldIsDateOnly() == null ? other.getFieldIsDateOnly() == null : this.getFieldIsDateOnly().equals(other.getFieldIsDateOnly()))
+                && (this.getFieldIsBuiltin() == null ? other.getFieldIsBuiltin() == null : this.getFieldIsBuiltin().equals(other.getFieldIsBuiltin()))
+                && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
+                && (this.getSelectConfig() == null ? other.getSelectConfig() == null : this.getSelectConfig().equals(other.getSelectConfig()))
+                && (this.getIsUpdate() == null ? other.getIsUpdate() == null : this.getIsUpdate().equals(other.getIsUpdate()))
+                && (this.getSysField() == null ? other.getSysField() == null : this.getSysField().equals(other.getSysField()))
+                && (this.getRemark() == null ? other.getRemark() == null : this.getRemark().equals(other.getRemark()))
+                && (this.getNeedRequest() == null ? other.getNeedRequest() == null : this.getNeedRequest().equals(other.getNeedRequest()));
     }
 
     @Override

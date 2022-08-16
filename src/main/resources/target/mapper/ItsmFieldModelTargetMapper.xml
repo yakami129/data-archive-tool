@@ -5,31 +5,31 @@
 <mapper namespace="com.skyjun.datamigration.target.mapper.ItsmFieldModelTargetMapper">
 
     <resultMap id="BaseResultMap" type="com.skyjun.datamigration.target.entity.ItsmFieldModelTarget">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="actPid" column="act_pid" jdbcType="BIGINT"/>
-            <result property="itsmTaskId" column="itsm_task_id" jdbcType="BIGINT"/>
-            <result property="itsmFieidId" column="itsm_fieid_id" jdbcType="BIGINT"/>
-            <result property="itsmFieidName" column="itsm_fieid_name" jdbcType="VARCHAR"/>
-            <result property="itsmFieidNum" column="itsm_fieid_num" jdbcType="VARCHAR"/>
-            <result property="itsmFieidControlType" column="itsm_fieid_control_type" jdbcType="VARCHAR"/>
-            <result property="itsmFieidModelIsreadable" column="itsm_fieid_model_isReadable" jdbcType="BIGINT"/>
-            <result property="itsmFieidModelIswrite" column="itsm_fieid_model_isWrite" jdbcType="BIGINT"/>
-            <result property="itsmFieidModelIsmust" column="itsm_fieid_model_isMust" jdbcType="BIGINT"/>
-            <result property="itsmProperty" column="itsm_property" jdbcType="BIGINT"/>
-            <result property="layoutPosition" column="layout_position" jdbcType="BIGINT"/>
-            <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
-            <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
-            <result property="h5Hide" column="h5_hide" jdbcType="BOOLEAN"/>
-            <result property="h5hide" column="h5hide" jdbcType="TINYINT"/>
-            <result property="colIndex" column="col_index" jdbcType="INTEGER"/>
-            <result property="prompt" column="prompt" jdbcType="VARCHAR"/>
-            <result property="rowIndex" column="row_index" jdbcType="INTEGER"/>
-            <result property="flat" column="flat" jdbcType="TINYINT"/>
-            <result property="levelNames" column="level_names" jdbcType="VARCHAR"/>
-            <result property="rule" column="rule" jdbcType="TINYINT"/>
-            <result property="ruleType" column="rule_type" jdbcType="INTEGER"/>
-            <result property="isReadOnly" column="is_read_only" jdbcType="INTEGER"/>
-            <result property="configuration" column="configuration" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="actPid" column="act_pid" jdbcType="BIGINT"/>
+        <result property="itsmTaskId" column="itsm_task_id" jdbcType="BIGINT"/>
+        <result property="itsmFieidId" column="itsm_fieid_id" jdbcType="BIGINT"/>
+        <result property="itsmFieidName" column="itsm_fieid_name" jdbcType="VARCHAR"/>
+        <result property="itsmFieidNum" column="itsm_fieid_num" jdbcType="VARCHAR"/>
+        <result property="itsmFieidControlType" column="itsm_fieid_control_type" jdbcType="VARCHAR"/>
+        <result property="itsmFieidModelIsreadable" column="itsm_fieid_model_isReadable" jdbcType="BIGINT"/>
+        <result property="itsmFieidModelIswrite" column="itsm_fieid_model_isWrite" jdbcType="BIGINT"/>
+        <result property="itsmFieidModelIsmust" column="itsm_fieid_model_isMust" jdbcType="BIGINT"/>
+        <result property="itsmProperty" column="itsm_property" jdbcType="BIGINT"/>
+        <result property="layoutPosition" column="layout_position" jdbcType="BIGINT"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+        <result property="h5Hide" column="h5_hide" jdbcType="BOOLEAN"/>
+        <result property="h5hide" column="h5hide" jdbcType="TINYINT"/>
+        <result property="colIndex" column="col_index" jdbcType="INTEGER"/>
+        <result property="prompt" column="prompt" jdbcType="VARCHAR"/>
+        <result property="rowIndex" column="row_index" jdbcType="INTEGER"/>
+        <result property="flat" column="flat" jdbcType="TINYINT"/>
+        <result property="levelNames" column="level_names" jdbcType="VARCHAR"/>
+        <result property="rule" column="rule" jdbcType="TINYINT"/>
+        <result property="ruleType" column="rule_type" jdbcType="INTEGER"/>
+        <result property="isReadOnly" column="is_read_only" jdbcType="INTEGER"/>
+        <result property="configuration" column="configuration" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">

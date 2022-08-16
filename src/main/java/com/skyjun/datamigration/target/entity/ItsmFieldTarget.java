@@ -13,189 +13,153 @@ import java.util.Date;
  */
 @TableName(value = "itsm_field")
 public class ItsmFieldTarget implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
      * ID
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
      * 字段编号
      */
     private String fieldNum;
-
     /**
      * 字段名称
      */
     private String fieldName;
-
     /**
      * 字段数据类型
      */
     private String fieldDataType;
-
     /**
      * 控件名称
      */
     private String fieldControlName;
-
     /**
      * 字段控件类型
      */
     private String fieldControlType;
-
     /**
      * 字段默认值
      */
     private String fieldDefaultValue;
-
     /**
      * 字段扩展属性（JSON）
      */
     private String fieldExtendJson;
-
     /**
      * 字段扩展URL
      */
     private String fieldExtendUrl;
-
     /**
      *
      */
     private Date createDate;
-
     /**
      *
      */
     private Date updateDate;
-
     /**
      * ico
      */
     private String fieldIco;
-
     /**
      * 文本最大长度，整数最大值，浮点数最大值
      */
     private Double fieldMax;
-
     /**
      *
      */
     private Double fieldMin;
-
     /**
      * 保留几位小数
      */
     private Long fieldRetainedDecimal;
-
     /**
      *
      */
     private String fieldCompany;
-
     /**
      * 是否仅日期
      */
     private Long fieldIsDateOnly;
-
     /**
      * 是否为内置字段
      */
     private Long fieldIsBuiltin;
-
     /**
      *
      */
     private String configuration;
-
     /**
      * 下拉菜单配置
      */
     private String selectConfig;
-
     /**
      * 内置字段是否可以修改 0：否  1：是
      */
     private Long isUpdate;
-
     /**
      * 系统字段 0：否  1：是
      */
     private Long sysField;
-
     /**
      * 字段描述
      */
     private String remark;
-
     /**
      * 内置字段是否可以修改 0：不需要  1：需要
      */
     private Long needRequest;
-
     /**
      * 是否是必填，1：是，0：否
      */
     private Byte itsmProperty;
-
     /**
      * （字段列表）是否可见，1：是，0：否
      */
     private Byte visibleTag;
-
     /**
      * 列号
      */
     private Integer colIndex;
-
     /**
      * 填写提示
      */
     private String prompt;
-
     /**
      * 行号
      */
     private Integer rowIndex;
-
     /**
      * （创建类型），1：url类型，0：手动
      */
     private Integer createType;
-
     /**
      * 级联菜单是否分级展示，1：是，0：否
      */
     private Byte flat;
-
     /**
      * 级联菜单分级展示各级名称
      */
     private String levelNames;
-
     /**
      * 是否正则校验，1：是，0：否
      */
     private Byte rule;
-
     /**
      * 正则校验
      */
     private Integer ruleType;
-
     /**
      * 操作类型：add/update/list;新增/修改/选择；作用于：数据源表格
      */
     private String operationType;
-
     /**
      * 字段是否只读，1：是，0：否
      */
     private Boolean isReadOnly;
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 
     /**
      * ID

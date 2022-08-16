@@ -4,168 +4,140 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 
  * @TableName itsm_service_work_essential
  */
-@TableName(value ="itsm_service_work_essential")
+@TableName(value = "itsm_service_work_essential")
 public class ItsmServiceWorkEssentialTarget implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
      * 关闭时间
      */
     private Date closeDate;
-
     /**
      * 优先级颜色
      */
     private String color;
-
     /**
      * 配置项
      */
     private String configuration;
-
     /**
      * 级别
      */
     private String disposeLevel;
-
     /**
-     * 
+     *
      */
     private String fileValue;
-
     /**
      * 影响范围
      */
     private Long influenceRange;
-
     /**
      * 发起人ID
      */
     private Long initiatorId;
-
     /**
      * 发起人名称
      */
     private String initiatorName;
-
     /**
      * 服务项类别id
      */
     private Long itemTypeId;
-
     /**
      * 逾期时间
      */
     private Date lateDate;
-
     /**
      * 请求时间
      */
     private Date requestDate;
-
     /**
      * 请求人Json
      */
     private String requestPerson;
-
     /**
      * 请求人id
      */
     private Long requestPersonId;
-
     /**
      * 服务目录ID
      */
     private Long serviceItemId;
-
     /**
      * slaId
      */
     private Long slaId;
-
     /**
      * 标题
      */
     private String title;
-
     /**
      * 更新时间
      */
     private Date updateDate;
-
     /**
      * 紧急程度
      */
     private Long urgentLevel;
-
     /**
      * 工单id
      */
     private Long workId;
-
     /**
      * 模板id
      */
     private Long templateId;
-
     /**
      * 满意度字段json
      */
     private String workSatisfaction;
-
     /**
      * 请求人姓名
      */
     private String requestPersonName;
-
     /**
-     * 
+     *
      */
     private Long requestPersonDepartmentId;
-
     /**
-     * 
+     *
      */
     private String requestPersonDepartmentName;
-
     /**
      * 关单人ID
      */
     private Long closeAssignorId;
-
     /**
      * 关单人名称
      */
     private String closeAssignorName;
-
     /**
-     * 
+     *
      */
     private Boolean isRelated;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
@@ -228,14 +200,14 @@ public class ItsmServiceWorkEssentialTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public String getFileValue() {
         return fileValue;
     }
 
     /**
-     * 
+     *
      */
     public void setFileValue(String fileValue) {
         this.fileValue = fileValue;
@@ -480,28 +452,28 @@ public class ItsmServiceWorkEssentialTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Long getRequestPersonDepartmentId() {
         return requestPersonDepartmentId;
     }
 
     /**
-     * 
+     *
      */
     public void setRequestPersonDepartmentId(Long requestPersonDepartmentId) {
         this.requestPersonDepartmentId = requestPersonDepartmentId;
     }
 
     /**
-     * 
+     *
      */
     public String getRequestPersonDepartmentName() {
         return requestPersonDepartmentName;
     }
 
     /**
-     * 
+     *
      */
     public void setRequestPersonDepartmentName(String requestPersonDepartmentName) {
         this.requestPersonDepartmentName = requestPersonDepartmentName;
@@ -536,14 +508,14 @@ public class ItsmServiceWorkEssentialTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Boolean getIsRelated() {
         return isRelated;
     }
 
     /**
-     * 
+     *
      */
     public void setIsRelated(Boolean isRelated) {
         this.isRelated = isRelated;
@@ -562,33 +534,33 @@ public class ItsmServiceWorkEssentialTarget implements Serializable {
         }
         ItsmServiceWorkEssentialTarget other = (ItsmServiceWorkEssentialTarget) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getCloseDate() == null ? other.getCloseDate() == null : this.getCloseDate().equals(other.getCloseDate()))
-            && (this.getColor() == null ? other.getColor() == null : this.getColor().equals(other.getColor()))
-            && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
-            && (this.getDisposeLevel() == null ? other.getDisposeLevel() == null : this.getDisposeLevel().equals(other.getDisposeLevel()))
-            && (this.getFileValue() == null ? other.getFileValue() == null : this.getFileValue().equals(other.getFileValue()))
-            && (this.getInfluenceRange() == null ? other.getInfluenceRange() == null : this.getInfluenceRange().equals(other.getInfluenceRange()))
-            && (this.getInitiatorId() == null ? other.getInitiatorId() == null : this.getInitiatorId().equals(other.getInitiatorId()))
-            && (this.getInitiatorName() == null ? other.getInitiatorName() == null : this.getInitiatorName().equals(other.getInitiatorName()))
-            && (this.getItemTypeId() == null ? other.getItemTypeId() == null : this.getItemTypeId().equals(other.getItemTypeId()))
-            && (this.getLateDate() == null ? other.getLateDate() == null : this.getLateDate().equals(other.getLateDate()))
-            && (this.getRequestDate() == null ? other.getRequestDate() == null : this.getRequestDate().equals(other.getRequestDate()))
-            && (this.getRequestPerson() == null ? other.getRequestPerson() == null : this.getRequestPerson().equals(other.getRequestPerson()))
-            && (this.getRequestPersonId() == null ? other.getRequestPersonId() == null : this.getRequestPersonId().equals(other.getRequestPersonId()))
-            && (this.getServiceItemId() == null ? other.getServiceItemId() == null : this.getServiceItemId().equals(other.getServiceItemId()))
-            && (this.getSlaId() == null ? other.getSlaId() == null : this.getSlaId().equals(other.getSlaId()))
-            && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
-            && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
-            && (this.getUrgentLevel() == null ? other.getUrgentLevel() == null : this.getUrgentLevel().equals(other.getUrgentLevel()))
-            && (this.getWorkId() == null ? other.getWorkId() == null : this.getWorkId().equals(other.getWorkId()))
-            && (this.getTemplateId() == null ? other.getTemplateId() == null : this.getTemplateId().equals(other.getTemplateId()))
-            && (this.getWorkSatisfaction() == null ? other.getWorkSatisfaction() == null : this.getWorkSatisfaction().equals(other.getWorkSatisfaction()))
-            && (this.getRequestPersonName() == null ? other.getRequestPersonName() == null : this.getRequestPersonName().equals(other.getRequestPersonName()))
-            && (this.getRequestPersonDepartmentId() == null ? other.getRequestPersonDepartmentId() == null : this.getRequestPersonDepartmentId().equals(other.getRequestPersonDepartmentId()))
-            && (this.getRequestPersonDepartmentName() == null ? other.getRequestPersonDepartmentName() == null : this.getRequestPersonDepartmentName().equals(other.getRequestPersonDepartmentName()))
-            && (this.getCloseAssignorId() == null ? other.getCloseAssignorId() == null : this.getCloseAssignorId().equals(other.getCloseAssignorId()))
-            && (this.getCloseAssignorName() == null ? other.getCloseAssignorName() == null : this.getCloseAssignorName().equals(other.getCloseAssignorName()))
-            && (this.getIsRelated() == null ? other.getIsRelated() == null : this.getIsRelated().equals(other.getIsRelated()));
+                && (this.getCloseDate() == null ? other.getCloseDate() == null : this.getCloseDate().equals(other.getCloseDate()))
+                && (this.getColor() == null ? other.getColor() == null : this.getColor().equals(other.getColor()))
+                && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
+                && (this.getDisposeLevel() == null ? other.getDisposeLevel() == null : this.getDisposeLevel().equals(other.getDisposeLevel()))
+                && (this.getFileValue() == null ? other.getFileValue() == null : this.getFileValue().equals(other.getFileValue()))
+                && (this.getInfluenceRange() == null ? other.getInfluenceRange() == null : this.getInfluenceRange().equals(other.getInfluenceRange()))
+                && (this.getInitiatorId() == null ? other.getInitiatorId() == null : this.getInitiatorId().equals(other.getInitiatorId()))
+                && (this.getInitiatorName() == null ? other.getInitiatorName() == null : this.getInitiatorName().equals(other.getInitiatorName()))
+                && (this.getItemTypeId() == null ? other.getItemTypeId() == null : this.getItemTypeId().equals(other.getItemTypeId()))
+                && (this.getLateDate() == null ? other.getLateDate() == null : this.getLateDate().equals(other.getLateDate()))
+                && (this.getRequestDate() == null ? other.getRequestDate() == null : this.getRequestDate().equals(other.getRequestDate()))
+                && (this.getRequestPerson() == null ? other.getRequestPerson() == null : this.getRequestPerson().equals(other.getRequestPerson()))
+                && (this.getRequestPersonId() == null ? other.getRequestPersonId() == null : this.getRequestPersonId().equals(other.getRequestPersonId()))
+                && (this.getServiceItemId() == null ? other.getServiceItemId() == null : this.getServiceItemId().equals(other.getServiceItemId()))
+                && (this.getSlaId() == null ? other.getSlaId() == null : this.getSlaId().equals(other.getSlaId()))
+                && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
+                && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
+                && (this.getUrgentLevel() == null ? other.getUrgentLevel() == null : this.getUrgentLevel().equals(other.getUrgentLevel()))
+                && (this.getWorkId() == null ? other.getWorkId() == null : this.getWorkId().equals(other.getWorkId()))
+                && (this.getTemplateId() == null ? other.getTemplateId() == null : this.getTemplateId().equals(other.getTemplateId()))
+                && (this.getWorkSatisfaction() == null ? other.getWorkSatisfaction() == null : this.getWorkSatisfaction().equals(other.getWorkSatisfaction()))
+                && (this.getRequestPersonName() == null ? other.getRequestPersonName() == null : this.getRequestPersonName().equals(other.getRequestPersonName()))
+                && (this.getRequestPersonDepartmentId() == null ? other.getRequestPersonDepartmentId() == null : this.getRequestPersonDepartmentId().equals(other.getRequestPersonDepartmentId()))
+                && (this.getRequestPersonDepartmentName() == null ? other.getRequestPersonDepartmentName() == null : this.getRequestPersonDepartmentName().equals(other.getRequestPersonDepartmentName()))
+                && (this.getCloseAssignorId() == null ? other.getCloseAssignorId() == null : this.getCloseAssignorId().equals(other.getCloseAssignorId()))
+                && (this.getCloseAssignorName() == null ? other.getCloseAssignorName() == null : this.getCloseAssignorName().equals(other.getCloseAssignorName()))
+                && (this.getIsRelated() == null ? other.getIsRelated() == null : this.getIsRelated().equals(other.getIsRelated()));
     }
 
     @Override

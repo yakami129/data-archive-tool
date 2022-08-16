@@ -4,153 +4,128 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 
  * @TableName itsm_field_model
  */
-@TableName(value ="itsm_field_model")
+@TableName(value = "itsm_field_model")
 public class ItsmFieldModelTarget implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
      * 流程模型ID
      */
     private Long actPid;
-
     /**
      * 任务ID
      */
     private Long itsmTaskId;
-
     /**
      * 字段ID
      */
     private Long itsmFieidId;
-
     /**
      * 字段名称
      */
     private String itsmFieidName;
-
     /**
      * 字段编码
      */
     private String itsmFieidNum;
-
     /**
      * 控件类型
      */
     private String itsmFieidControlType;
-
     /**
      * 是否可读：0：否 1：是
      */
     private Long itsmFieidModelIsreadable;
-
     /**
      * 是否可写 0：否 1：是
      */
     private Long itsmFieidModelIswrite;
-
     /**
      * 是否必输：0：否 1：是
      */
     private Long itsmFieidModelIsmust;
-
     /**
      * 属性
      */
     private Long itsmProperty;
-
     /**
      * 布局位置
      */
     private Long layoutPosition;
-
     /**
-     * 
+     *
      */
     private Date createDate;
-
     /**
-     * 
+     *
      */
     private Date updateDate;
-
     /**
      * h5是否隐藏字段
      */
     private Boolean h5Hide;
-
     /**
      * 是否是隐藏字段，1：是，0：否
      */
     private Byte h5hide;
-
     /**
      * 列号
      */
     private Integer colIndex;
-
     /**
      * 填写提示
      */
     private String prompt;
-
     /**
      * 行号
      */
     private Integer rowIndex;
-
     /**
      * 级联菜单是否分级展示，1：是，0：否
      */
     private Byte flat;
-
     /**
      * 级联菜单分级展示各级名称
      */
     private String levelNames;
-
     /**
      * 是否正则校验，1：是，0：否
      */
     private Byte rule;
-
     /**
      * 正则校验
      */
     private Integer ruleType;
-
     /**
-     * 
+     *
      */
     private Integer isReadOnly;
-
     /**
      * 字段配置信息
      */
     private String configuration;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
@@ -311,28 +286,28 @@ public class ItsmFieldModelTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Date getCreateDate() {
         return createDate;
     }
 
     /**
-     * 
+     *
      */
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
     /**
-     * 
+     *
      */
     public Date getUpdateDate() {
         return updateDate;
     }
 
     /**
-     * 
+     *
      */
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
@@ -465,14 +440,14 @@ public class ItsmFieldModelTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Integer getIsReadOnly() {
         return isReadOnly;
     }
 
     /**
-     * 
+     *
      */
     public void setIsReadOnly(Integer isReadOnly) {
         this.isReadOnly = isReadOnly;
@@ -505,30 +480,30 @@ public class ItsmFieldModelTarget implements Serializable {
         }
         ItsmFieldModelTarget other = (ItsmFieldModelTarget) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getActPid() == null ? other.getActPid() == null : this.getActPid().equals(other.getActPid()))
-            && (this.getItsmTaskId() == null ? other.getItsmTaskId() == null : this.getItsmTaskId().equals(other.getItsmTaskId()))
-            && (this.getItsmFieidId() == null ? other.getItsmFieidId() == null : this.getItsmFieidId().equals(other.getItsmFieidId()))
-            && (this.getItsmFieidName() == null ? other.getItsmFieidName() == null : this.getItsmFieidName().equals(other.getItsmFieidName()))
-            && (this.getItsmFieidNum() == null ? other.getItsmFieidNum() == null : this.getItsmFieidNum().equals(other.getItsmFieidNum()))
-            && (this.getItsmFieidControlType() == null ? other.getItsmFieidControlType() == null : this.getItsmFieidControlType().equals(other.getItsmFieidControlType()))
-            && (this.getItsmFieidModelIsreadable() == null ? other.getItsmFieidModelIsreadable() == null : this.getItsmFieidModelIsreadable().equals(other.getItsmFieidModelIsreadable()))
-            && (this.getItsmFieidModelIswrite() == null ? other.getItsmFieidModelIswrite() == null : this.getItsmFieidModelIswrite().equals(other.getItsmFieidModelIswrite()))
-            && (this.getItsmFieidModelIsmust() == null ? other.getItsmFieidModelIsmust() == null : this.getItsmFieidModelIsmust().equals(other.getItsmFieidModelIsmust()))
-            && (this.getItsmProperty() == null ? other.getItsmProperty() == null : this.getItsmProperty().equals(other.getItsmProperty()))
-            && (this.getLayoutPosition() == null ? other.getLayoutPosition() == null : this.getLayoutPosition().equals(other.getLayoutPosition()))
-            && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
-            && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
-            && (this.getH5Hide() == null ? other.getH5Hide() == null : this.getH5Hide().equals(other.getH5Hide()))
-            && (this.getH5hide() == null ? other.getH5hide() == null : this.getH5hide().equals(other.getH5hide()))
-            && (this.getColIndex() == null ? other.getColIndex() == null : this.getColIndex().equals(other.getColIndex()))
-            && (this.getPrompt() == null ? other.getPrompt() == null : this.getPrompt().equals(other.getPrompt()))
-            && (this.getRowIndex() == null ? other.getRowIndex() == null : this.getRowIndex().equals(other.getRowIndex()))
-            && (this.getFlat() == null ? other.getFlat() == null : this.getFlat().equals(other.getFlat()))
-            && (this.getLevelNames() == null ? other.getLevelNames() == null : this.getLevelNames().equals(other.getLevelNames()))
-            && (this.getRule() == null ? other.getRule() == null : this.getRule().equals(other.getRule()))
-            && (this.getRuleType() == null ? other.getRuleType() == null : this.getRuleType().equals(other.getRuleType()))
-            && (this.getIsReadOnly() == null ? other.getIsReadOnly() == null : this.getIsReadOnly().equals(other.getIsReadOnly()))
-            && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()));
+                && (this.getActPid() == null ? other.getActPid() == null : this.getActPid().equals(other.getActPid()))
+                && (this.getItsmTaskId() == null ? other.getItsmTaskId() == null : this.getItsmTaskId().equals(other.getItsmTaskId()))
+                && (this.getItsmFieidId() == null ? other.getItsmFieidId() == null : this.getItsmFieidId().equals(other.getItsmFieidId()))
+                && (this.getItsmFieidName() == null ? other.getItsmFieidName() == null : this.getItsmFieidName().equals(other.getItsmFieidName()))
+                && (this.getItsmFieidNum() == null ? other.getItsmFieidNum() == null : this.getItsmFieidNum().equals(other.getItsmFieidNum()))
+                && (this.getItsmFieidControlType() == null ? other.getItsmFieidControlType() == null : this.getItsmFieidControlType().equals(other.getItsmFieidControlType()))
+                && (this.getItsmFieidModelIsreadable() == null ? other.getItsmFieidModelIsreadable() == null : this.getItsmFieidModelIsreadable().equals(other.getItsmFieidModelIsreadable()))
+                && (this.getItsmFieidModelIswrite() == null ? other.getItsmFieidModelIswrite() == null : this.getItsmFieidModelIswrite().equals(other.getItsmFieidModelIswrite()))
+                && (this.getItsmFieidModelIsmust() == null ? other.getItsmFieidModelIsmust() == null : this.getItsmFieidModelIsmust().equals(other.getItsmFieidModelIsmust()))
+                && (this.getItsmProperty() == null ? other.getItsmProperty() == null : this.getItsmProperty().equals(other.getItsmProperty()))
+                && (this.getLayoutPosition() == null ? other.getLayoutPosition() == null : this.getLayoutPosition().equals(other.getLayoutPosition()))
+                && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
+                && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
+                && (this.getH5Hide() == null ? other.getH5Hide() == null : this.getH5Hide().equals(other.getH5Hide()))
+                && (this.getH5hide() == null ? other.getH5hide() == null : this.getH5hide().equals(other.getH5hide()))
+                && (this.getColIndex() == null ? other.getColIndex() == null : this.getColIndex().equals(other.getColIndex()))
+                && (this.getPrompt() == null ? other.getPrompt() == null : this.getPrompt().equals(other.getPrompt()))
+                && (this.getRowIndex() == null ? other.getRowIndex() == null : this.getRowIndex().equals(other.getRowIndex()))
+                && (this.getFlat() == null ? other.getFlat() == null : this.getFlat().equals(other.getFlat()))
+                && (this.getLevelNames() == null ? other.getLevelNames() == null : this.getLevelNames().equals(other.getLevelNames()))
+                && (this.getRule() == null ? other.getRule() == null : this.getRule().equals(other.getRule()))
+                && (this.getRuleType() == null ? other.getRuleType() == null : this.getRuleType().equals(other.getRuleType()))
+                && (this.getIsReadOnly() == null ? other.getIsReadOnly() == null : this.getIsReadOnly().equals(other.getIsReadOnly()))
+                && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()));
     }
 
     @Override

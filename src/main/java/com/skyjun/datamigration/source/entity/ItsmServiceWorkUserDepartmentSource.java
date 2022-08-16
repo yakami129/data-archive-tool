@@ -4,108 +4,103 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
- * 
  * @TableName itsm_service_work_user_department
  */
-@TableName(value ="itsm_service_work_user_department")
+@TableName(value = "itsm_service_work_user_department")
 public class ItsmServiceWorkUserDepartmentSource implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
-     * 
+     *
      */
     private Integer type;
-
     /**
-     * 
+     *
      */
     private Long serviceWorkId;
-
     /**
-     * 
+     *
      */
     private Long userId;
-
     /**
-     * 
+     *
      */
     private Long departmentId;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
     }
 
     /**
-     * 
+     *
      */
     public Integer getType() {
         return type;
     }
 
     /**
-     * 
+     *
      */
     public void setType(Integer type) {
         this.type = type;
     }
 
     /**
-     * 
+     *
      */
     public Long getServiceWorkId() {
         return serviceWorkId;
     }
 
     /**
-     * 
+     *
      */
     public void setServiceWorkId(Long serviceWorkId) {
         this.serviceWorkId = serviceWorkId;
     }
 
     /**
-     * 
+     *
      */
     public Long getUserId() {
         return userId;
     }
 
     /**
-     * 
+     *
      */
     public void setUserId(Long userId) {
         this.userId = userId;
     }
 
     /**
-     * 
+     *
      */
     public Long getDepartmentId() {
         return departmentId;
     }
 
     /**
-     * 
+     *
      */
     public void setDepartmentId(Long departmentId) {
         this.departmentId = departmentId;
@@ -124,10 +119,10 @@ public class ItsmServiceWorkUserDepartmentSource implements Serializable {
         }
         ItsmServiceWorkUserDepartmentSource other = (ItsmServiceWorkUserDepartmentSource) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getType() == null ? other.getType() == null : this.getType().equals(other.getType()))
-            && (this.getServiceWorkId() == null ? other.getServiceWorkId() == null : this.getServiceWorkId().equals(other.getServiceWorkId()))
-            && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
-            && (this.getDepartmentId() == null ? other.getDepartmentId() == null : this.getDepartmentId().equals(other.getDepartmentId()));
+                && (this.getType() == null ? other.getType() == null : this.getType().equals(other.getType()))
+                && (this.getServiceWorkId() == null ? other.getServiceWorkId() == null : this.getServiceWorkId().equals(other.getServiceWorkId()))
+                && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
+                && (this.getDepartmentId() == null ? other.getDepartmentId() == null : this.getDepartmentId().equals(other.getDepartmentId()));
     }
 
     @Override

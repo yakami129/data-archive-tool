@@ -4,62 +4,55 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
- * 
  * @TableName itsm_processmodel_staff_scope
  */
-@TableName(value ="itsm_processmodel_staff_scope")
+@TableName(value = "itsm_processmodel_staff_scope")
 public class ItsmProcessmodelStaffScopeSource implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
      * 流程模型ID
      */
     private Long itsmProId;
-
     /**
      * 任务模型ID
      */
     private Long itsmTaskId;
-
     /**
      * 用户ID
      */
     private Long itsmProUserAndGroup;
-
     /**
-     * 
+     *
      */
     private String itsmProType;
-
     /**
      * 组的父Id
      */
     private Long groupParentId;
-
     /**
      * 登录名
      */
     private String itsmLogin;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
@@ -108,14 +101,14 @@ public class ItsmProcessmodelStaffScopeSource implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public String getItsmProType() {
         return itsmProType;
     }
 
     /**
-     * 
+     *
      */
     public void setItsmProType(String itsmProType) {
         this.itsmProType = itsmProType;
@@ -162,12 +155,12 @@ public class ItsmProcessmodelStaffScopeSource implements Serializable {
         }
         ItsmProcessmodelStaffScopeSource other = (ItsmProcessmodelStaffScopeSource) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getItsmProId() == null ? other.getItsmProId() == null : this.getItsmProId().equals(other.getItsmProId()))
-            && (this.getItsmTaskId() == null ? other.getItsmTaskId() == null : this.getItsmTaskId().equals(other.getItsmTaskId()))
-            && (this.getItsmProUserAndGroup() == null ? other.getItsmProUserAndGroup() == null : this.getItsmProUserAndGroup().equals(other.getItsmProUserAndGroup()))
-            && (this.getItsmProType() == null ? other.getItsmProType() == null : this.getItsmProType().equals(other.getItsmProType()))
-            && (this.getGroupParentId() == null ? other.getGroupParentId() == null : this.getGroupParentId().equals(other.getGroupParentId()))
-            && (this.getItsmLogin() == null ? other.getItsmLogin() == null : this.getItsmLogin().equals(other.getItsmLogin()));
+                && (this.getItsmProId() == null ? other.getItsmProId() == null : this.getItsmProId().equals(other.getItsmProId()))
+                && (this.getItsmTaskId() == null ? other.getItsmTaskId() == null : this.getItsmTaskId().equals(other.getItsmTaskId()))
+                && (this.getItsmProUserAndGroup() == null ? other.getItsmProUserAndGroup() == null : this.getItsmProUserAndGroup().equals(other.getItsmProUserAndGroup()))
+                && (this.getItsmProType() == null ? other.getItsmProType() == null : this.getItsmProType().equals(other.getItsmProType()))
+                && (this.getGroupParentId() == null ? other.getGroupParentId() == null : this.getGroupParentId().equals(other.getGroupParentId()))
+                && (this.getItsmLogin() == null ? other.getItsmLogin() == null : this.getItsmLogin().equals(other.getItsmLogin()));
     }
 
     @Override

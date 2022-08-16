@@ -4,206 +4,173 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
- * 
  * @TableName itsm_task
  */
-@TableName(value ="itsm_task")
+@TableName(value = "itsm_task")
 public class ItsmTaskSource implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
-     * 
+     *
      */
     private Long actPid;
-
     /**
      * 任务名称
      */
     private String taskName;
-
     /**
      * 阶段说明
      */
     private String taskDescribe;
-
     /**
      * 指派人ID
      */
     private Long taskAssignorId;
-
     /**
      * 指派人名称
      */
     private String taskAssignorName;
-
     /**
-     * 
+     *
      */
     private Long taskPosition;
-
     /**
      * 人员范围：0：默认，会签：1 依此会签 2
      */
     private Long staffScope;
-
     /**
      * 分配方式  0：由上一处理人指定，1：由发起人指定，2：主动认领
      */
     private Long taskDistributionMode;
-
     /**
      * 流程连接类型
      */
     private String sequenceFlowType;
-
     /**
      * 下一个任务
      */
     private String nextTask;
-
     /**
-     * 
+     *
      */
     private String changeInput;
-
     /**
      * 动态任务，用于动态分配处理人
      */
     private String dynamicTask;
-
     /**
      * 是否可以转办：1:是，0：否
      */
     private Long transferBool;
-
     /**
      * 是否可以驳回：1:是，0：否
      */
     private Long taskRejectBool;
-
     /**
      * 转办次数
      */
     private Long transferTime;
-
     /**
      * 绑定的子流程
      */
     private Long bindActPid;
-
     /**
      * 节点类别
      */
     private String category;
-
     /**
      * 是否开启系统通知：1:是，0：否
      */
     private Long sysNoticeBool;
-
     /**
      * 前端配置项
      */
     private String configuration;
-
     /**
-     * 
+     *
      */
     private Long olaId;
-
     /**
      * 是否开启系统通知：1:是，0：否
      */
     private Long outParamBool;
-
     /**
      * 出参列表
      */
     private String outParamJson;
-
     /**
      * 服务节点设置
      */
     private String serviceTaskFieldVal;
-
     /**
      * 是否自动分配： 1、是  2、否
      */
     private Long assignBool;
-
     /**
      * 分派超时时间
      */
     private Long assignTimeOut;
-
     /**
      * 分派方式： 1、权重分派   2、随机分派
      */
     private Long assignType;
-
     /**
      * 服务节点设置
      */
     private String outParamType;
-
     /**
      * 流程模型Id
      */
     private String template;
-
     /**
      * 分配规则
      */
     private Long distributionRule;
-
     /**
      * 多人规则
      */
     private Long manyPeopleRule;
-
     /**
      * 人员范围类型
      */
     private Long staffScopeType;
-
     /**
      * 移动端不可处理
      */
     private Long hfiveNohandle;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
     }
 
     /**
-     * 
+     *
      */
     public Long getActPid() {
         return actPid;
     }
 
     /**
-     * 
+     *
      */
     public void setActPid(Long actPid) {
         this.actPid = actPid;
@@ -266,14 +233,14 @@ public class ItsmTaskSource implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Long getTaskPosition() {
         return taskPosition;
     }
 
     /**
-     * 
+     *
      */
     public void setTaskPosition(Long taskPosition) {
         this.taskPosition = taskPosition;
@@ -336,14 +303,14 @@ public class ItsmTaskSource implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public String getChangeInput() {
         return changeInput;
     }
 
     /**
-     * 
+     *
      */
     public void setChangeInput(String changeInput) {
         this.changeInput = changeInput;
@@ -462,14 +429,14 @@ public class ItsmTaskSource implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Long getOlaId() {
         return olaId;
     }
 
     /**
-     * 
+     *
      */
     public void setOlaId(Long olaId) {
         this.olaId = olaId;
@@ -656,38 +623,38 @@ public class ItsmTaskSource implements Serializable {
         }
         ItsmTaskSource other = (ItsmTaskSource) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getActPid() == null ? other.getActPid() == null : this.getActPid().equals(other.getActPid()))
-            && (this.getTaskName() == null ? other.getTaskName() == null : this.getTaskName().equals(other.getTaskName()))
-            && (this.getTaskDescribe() == null ? other.getTaskDescribe() == null : this.getTaskDescribe().equals(other.getTaskDescribe()))
-            && (this.getTaskAssignorId() == null ? other.getTaskAssignorId() == null : this.getTaskAssignorId().equals(other.getTaskAssignorId()))
-            && (this.getTaskAssignorName() == null ? other.getTaskAssignorName() == null : this.getTaskAssignorName().equals(other.getTaskAssignorName()))
-            && (this.getTaskPosition() == null ? other.getTaskPosition() == null : this.getTaskPosition().equals(other.getTaskPosition()))
-            && (this.getStaffScope() == null ? other.getStaffScope() == null : this.getStaffScope().equals(other.getStaffScope()))
-            && (this.getTaskDistributionMode() == null ? other.getTaskDistributionMode() == null : this.getTaskDistributionMode().equals(other.getTaskDistributionMode()))
-            && (this.getSequenceFlowType() == null ? other.getSequenceFlowType() == null : this.getSequenceFlowType().equals(other.getSequenceFlowType()))
-            && (this.getNextTask() == null ? other.getNextTask() == null : this.getNextTask().equals(other.getNextTask()))
-            && (this.getChangeInput() == null ? other.getChangeInput() == null : this.getChangeInput().equals(other.getChangeInput()))
-            && (this.getDynamicTask() == null ? other.getDynamicTask() == null : this.getDynamicTask().equals(other.getDynamicTask()))
-            && (this.getTransferBool() == null ? other.getTransferBool() == null : this.getTransferBool().equals(other.getTransferBool()))
-            && (this.getTaskRejectBool() == null ? other.getTaskRejectBool() == null : this.getTaskRejectBool().equals(other.getTaskRejectBool()))
-            && (this.getTransferTime() == null ? other.getTransferTime() == null : this.getTransferTime().equals(other.getTransferTime()))
-            && (this.getBindActPid() == null ? other.getBindActPid() == null : this.getBindActPid().equals(other.getBindActPid()))
-            && (this.getCategory() == null ? other.getCategory() == null : this.getCategory().equals(other.getCategory()))
-            && (this.getSysNoticeBool() == null ? other.getSysNoticeBool() == null : this.getSysNoticeBool().equals(other.getSysNoticeBool()))
-            && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
-            && (this.getOlaId() == null ? other.getOlaId() == null : this.getOlaId().equals(other.getOlaId()))
-            && (this.getOutParamBool() == null ? other.getOutParamBool() == null : this.getOutParamBool().equals(other.getOutParamBool()))
-            && (this.getOutParamJson() == null ? other.getOutParamJson() == null : this.getOutParamJson().equals(other.getOutParamJson()))
-            && (this.getServiceTaskFieldVal() == null ? other.getServiceTaskFieldVal() == null : this.getServiceTaskFieldVal().equals(other.getServiceTaskFieldVal()))
-            && (this.getAssignBool() == null ? other.getAssignBool() == null : this.getAssignBool().equals(other.getAssignBool()))
-            && (this.getAssignTimeOut() == null ? other.getAssignTimeOut() == null : this.getAssignTimeOut().equals(other.getAssignTimeOut()))
-            && (this.getAssignType() == null ? other.getAssignType() == null : this.getAssignType().equals(other.getAssignType()))
-            && (this.getOutParamType() == null ? other.getOutParamType() == null : this.getOutParamType().equals(other.getOutParamType()))
-            && (this.getTemplate() == null ? other.getTemplate() == null : this.getTemplate().equals(other.getTemplate()))
-            && (this.getDistributionRule() == null ? other.getDistributionRule() == null : this.getDistributionRule().equals(other.getDistributionRule()))
-            && (this.getManyPeopleRule() == null ? other.getManyPeopleRule() == null : this.getManyPeopleRule().equals(other.getManyPeopleRule()))
-            && (this.getStaffScopeType() == null ? other.getStaffScopeType() == null : this.getStaffScopeType().equals(other.getStaffScopeType()))
-            && (this.getHfiveNohandle() == null ? other.getHfiveNohandle() == null : this.getHfiveNohandle().equals(other.getHfiveNohandle()));
+                && (this.getActPid() == null ? other.getActPid() == null : this.getActPid().equals(other.getActPid()))
+                && (this.getTaskName() == null ? other.getTaskName() == null : this.getTaskName().equals(other.getTaskName()))
+                && (this.getTaskDescribe() == null ? other.getTaskDescribe() == null : this.getTaskDescribe().equals(other.getTaskDescribe()))
+                && (this.getTaskAssignorId() == null ? other.getTaskAssignorId() == null : this.getTaskAssignorId().equals(other.getTaskAssignorId()))
+                && (this.getTaskAssignorName() == null ? other.getTaskAssignorName() == null : this.getTaskAssignorName().equals(other.getTaskAssignorName()))
+                && (this.getTaskPosition() == null ? other.getTaskPosition() == null : this.getTaskPosition().equals(other.getTaskPosition()))
+                && (this.getStaffScope() == null ? other.getStaffScope() == null : this.getStaffScope().equals(other.getStaffScope()))
+                && (this.getTaskDistributionMode() == null ? other.getTaskDistributionMode() == null : this.getTaskDistributionMode().equals(other.getTaskDistributionMode()))
+                && (this.getSequenceFlowType() == null ? other.getSequenceFlowType() == null : this.getSequenceFlowType().equals(other.getSequenceFlowType()))
+                && (this.getNextTask() == null ? other.getNextTask() == null : this.getNextTask().equals(other.getNextTask()))
+                && (this.getChangeInput() == null ? other.getChangeInput() == null : this.getChangeInput().equals(other.getChangeInput()))
+                && (this.getDynamicTask() == null ? other.getDynamicTask() == null : this.getDynamicTask().equals(other.getDynamicTask()))
+                && (this.getTransferBool() == null ? other.getTransferBool() == null : this.getTransferBool().equals(other.getTransferBool()))
+                && (this.getTaskRejectBool() == null ? other.getTaskRejectBool() == null : this.getTaskRejectBool().equals(other.getTaskRejectBool()))
+                && (this.getTransferTime() == null ? other.getTransferTime() == null : this.getTransferTime().equals(other.getTransferTime()))
+                && (this.getBindActPid() == null ? other.getBindActPid() == null : this.getBindActPid().equals(other.getBindActPid()))
+                && (this.getCategory() == null ? other.getCategory() == null : this.getCategory().equals(other.getCategory()))
+                && (this.getSysNoticeBool() == null ? other.getSysNoticeBool() == null : this.getSysNoticeBool().equals(other.getSysNoticeBool()))
+                && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
+                && (this.getOlaId() == null ? other.getOlaId() == null : this.getOlaId().equals(other.getOlaId()))
+                && (this.getOutParamBool() == null ? other.getOutParamBool() == null : this.getOutParamBool().equals(other.getOutParamBool()))
+                && (this.getOutParamJson() == null ? other.getOutParamJson() == null : this.getOutParamJson().equals(other.getOutParamJson()))
+                && (this.getServiceTaskFieldVal() == null ? other.getServiceTaskFieldVal() == null : this.getServiceTaskFieldVal().equals(other.getServiceTaskFieldVal()))
+                && (this.getAssignBool() == null ? other.getAssignBool() == null : this.getAssignBool().equals(other.getAssignBool()))
+                && (this.getAssignTimeOut() == null ? other.getAssignTimeOut() == null : this.getAssignTimeOut().equals(other.getAssignTimeOut()))
+                && (this.getAssignType() == null ? other.getAssignType() == null : this.getAssignType().equals(other.getAssignType()))
+                && (this.getOutParamType() == null ? other.getOutParamType() == null : this.getOutParamType().equals(other.getOutParamType()))
+                && (this.getTemplate() == null ? other.getTemplate() == null : this.getTemplate().equals(other.getTemplate()))
+                && (this.getDistributionRule() == null ? other.getDistributionRule() == null : this.getDistributionRule().equals(other.getDistributionRule()))
+                && (this.getManyPeopleRule() == null ? other.getManyPeopleRule() == null : this.getManyPeopleRule().equals(other.getManyPeopleRule()))
+                && (this.getStaffScopeType() == null ? other.getStaffScopeType() == null : this.getStaffScopeType().equals(other.getStaffScopeType()))
+                && (this.getHfiveNohandle() == null ? other.getHfiveNohandle() == null : this.getHfiveNohandle().equals(other.getHfiveNohandle()));
     }
 
     @Override

@@ -7,7 +7,6 @@ import com.skyjun.datamigration.source.entity.ItsmFieldModelSource;
 import com.skyjun.datamigration.source.service.ItsmFieldModelSourceService;
 import com.skyjun.datamigration.target.entity.ItsmFieldModelTarget;
 import com.skyjun.datamigration.target.mapper.ItsmFieldModelTargetMapper;
-import com.skyjun.datamigration.target.service.ItsmFieldModelTargetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -31,6 +30,14 @@ public class ItsmFieldModelEntityActuatorImpl extends AbstractDataEntityActuator
     @Override
     protected Class<ItsmFieldModelTarget> getTargetClass() {
         return ItsmFieldModelTarget.class;
+    }
+
+    @Override
+    protected ItsmFieldModelTarget convert(ItsmFieldModelSource itsmFieldModelSource, Class<ItsmFieldModelTarget> clazz) {
+        ItsmFieldModelTarget convert = super.convert(itsmFieldModelSource, clazz);
+        convert.setColIndex(1);
+        convert.setRowIndex(convert.getItsmFieidId().intValue());
+        return convert;
     }
 
     @Override

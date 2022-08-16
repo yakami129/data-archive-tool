@@ -1,6 +1,5 @@
 package com.skyjun.datamigration.actuator.impl;
 
-import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.skyjun.datamigration.actuator.AbstractDataEntityActuator;
 import com.skyjun.datamigration.core.CustomBaseMapper;
@@ -41,5 +40,13 @@ public class ItsmFieldEntityActuatorImpl extends AbstractDataEntityActuator<Itsm
     @Override
     public CustomBaseMapper<ItsmFieldTarget> getTargetMapper() {
         return itsmFieldTargetMapper;
+    }
+
+    @Override
+    protected ItsmFieldTarget convert(ItsmFieldSource itsmFieldSource, Class<ItsmFieldTarget> clazz) {
+        ItsmFieldTarget convert = super.convert(itsmFieldSource, clazz);
+        convert.setColIndex(1);
+        convert.setRowIndex(convert.getId().intValue());
+        return convert;
     }
 }

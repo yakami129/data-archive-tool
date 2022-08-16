@@ -4,118 +4,100 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 
  * @TableName itsm_process_model
  */
-@TableName(value ="itsm_process_model")
+@TableName(value = "itsm_process_model")
 public class ItsmProcessModelTarget implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
      * act流程模型ID
      */
     private String actPid;
-
     /**
-     * 
+     *
      */
     private String proName;
-
     /**
      * 流程描述
      */
     private String proDescribe;
-
     /**
      * 是否启用：0：禁用 1：启用
      */
     private Long proIsEnabled;
-
     /**
      * 流程模型创建人ID
      */
     private Long proCreateId;
-
     /**
      * 流程模型创建人名称
      */
     private String proCreateName;
-
     /**
-     * 
+     *
      */
     private Long builtIn;
-
     /**
-     * 
+     *
      */
     private Date createDate;
-
     /**
-     * 
+     *
      */
     private Date updateDate;
-
     /**
-     * 
+     *
      */
     private String bpmn;
-
     /**
      * 到达
      */
     private String bpmnViewType;
-
     /**
      * bpmn流程图configuration
      */
     private String configuration;
-
     /**
      * 是否是历史记录，1：是，0：否
      */
     private Long hiStatus;
-
     /**
      * 流程类型
      */
     private String proType;
-
     /**
-     * 
+     *
      */
     private Long moveconfig;
-
     /**
      * 历史组
      */
     private String historyGroup;
-
     /**
      * 版本号
      */
     private Integer version;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
@@ -136,14 +118,14 @@ public class ItsmProcessModelTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public String getProName() {
         return proName;
     }
 
     /**
-     * 
+     *
      */
     public void setProName(String proName) {
         this.proName = proName;
@@ -206,56 +188,56 @@ public class ItsmProcessModelTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Long getBuiltIn() {
         return builtIn;
     }
 
     /**
-     * 
+     *
      */
     public void setBuiltIn(Long builtIn) {
         this.builtIn = builtIn;
     }
 
     /**
-     * 
+     *
      */
     public Date getCreateDate() {
         return createDate;
     }
 
     /**
-     * 
+     *
      */
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
     /**
-     * 
+     *
      */
     public Date getUpdateDate() {
         return updateDate;
     }
 
     /**
-     * 
+     *
      */
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
     }
 
     /**
-     * 
+     *
      */
     public String getBpmn() {
         return bpmn;
     }
 
     /**
-     * 
+     *
      */
     public void setBpmn(String bpmn) {
         this.bpmn = bpmn;
@@ -318,14 +300,14 @@ public class ItsmProcessModelTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Long getMoveconfig() {
         return moveconfig;
     }
 
     /**
-     * 
+     *
      */
     public void setMoveconfig(Long moveconfig) {
         this.moveconfig = moveconfig;
@@ -372,23 +354,23 @@ public class ItsmProcessModelTarget implements Serializable {
         }
         ItsmProcessModelTarget other = (ItsmProcessModelTarget) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getActPid() == null ? other.getActPid() == null : this.getActPid().equals(other.getActPid()))
-            && (this.getProName() == null ? other.getProName() == null : this.getProName().equals(other.getProName()))
-            && (this.getProDescribe() == null ? other.getProDescribe() == null : this.getProDescribe().equals(other.getProDescribe()))
-            && (this.getProIsEnabled() == null ? other.getProIsEnabled() == null : this.getProIsEnabled().equals(other.getProIsEnabled()))
-            && (this.getProCreateId() == null ? other.getProCreateId() == null : this.getProCreateId().equals(other.getProCreateId()))
-            && (this.getProCreateName() == null ? other.getProCreateName() == null : this.getProCreateName().equals(other.getProCreateName()))
-            && (this.getBuiltIn() == null ? other.getBuiltIn() == null : this.getBuiltIn().equals(other.getBuiltIn()))
-            && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
-            && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
-            && (this.getBpmn() == null ? other.getBpmn() == null : this.getBpmn().equals(other.getBpmn()))
-            && (this.getBpmnViewType() == null ? other.getBpmnViewType() == null : this.getBpmnViewType().equals(other.getBpmnViewType()))
-            && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
-            && (this.getHiStatus() == null ? other.getHiStatus() == null : this.getHiStatus().equals(other.getHiStatus()))
-            && (this.getProType() == null ? other.getProType() == null : this.getProType().equals(other.getProType()))
-            && (this.getMoveconfig() == null ? other.getMoveconfig() == null : this.getMoveconfig().equals(other.getMoveconfig()))
-            && (this.getHistoryGroup() == null ? other.getHistoryGroup() == null : this.getHistoryGroup().equals(other.getHistoryGroup()))
-            && (this.getVersion() == null ? other.getVersion() == null : this.getVersion().equals(other.getVersion()));
+                && (this.getActPid() == null ? other.getActPid() == null : this.getActPid().equals(other.getActPid()))
+                && (this.getProName() == null ? other.getProName() == null : this.getProName().equals(other.getProName()))
+                && (this.getProDescribe() == null ? other.getProDescribe() == null : this.getProDescribe().equals(other.getProDescribe()))
+                && (this.getProIsEnabled() == null ? other.getProIsEnabled() == null : this.getProIsEnabled().equals(other.getProIsEnabled()))
+                && (this.getProCreateId() == null ? other.getProCreateId() == null : this.getProCreateId().equals(other.getProCreateId()))
+                && (this.getProCreateName() == null ? other.getProCreateName() == null : this.getProCreateName().equals(other.getProCreateName()))
+                && (this.getBuiltIn() == null ? other.getBuiltIn() == null : this.getBuiltIn().equals(other.getBuiltIn()))
+                && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
+                && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
+                && (this.getBpmn() == null ? other.getBpmn() == null : this.getBpmn().equals(other.getBpmn()))
+                && (this.getBpmnViewType() == null ? other.getBpmnViewType() == null : this.getBpmnViewType().equals(other.getBpmnViewType()))
+                && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
+                && (this.getHiStatus() == null ? other.getHiStatus() == null : this.getHiStatus().equals(other.getHiStatus()))
+                && (this.getProType() == null ? other.getProType() == null : this.getProType().equals(other.getProType()))
+                && (this.getMoveconfig() == null ? other.getMoveconfig() == null : this.getMoveconfig().equals(other.getMoveconfig()))
+                && (this.getHistoryGroup() == null ? other.getHistoryGroup() == null : this.getHistoryGroup().equals(other.getHistoryGroup()))
+                && (this.getVersion() == null ? other.getVersion() == null : this.getVersion().equals(other.getVersion()));
     }
 
     @Override

@@ -4,103 +4,88 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 
  * @TableName itsm_service_item
  */
-@TableName(value ="itsm_service_item")
+@TableName(value = "itsm_service_item")
 public class ItsmServiceItemTarget implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
      * 服务项名称
      */
     private String serviceItemName;
-
     /**
      * 负责人
      */
     private String serviceItemHead;
-
     /**
      * 服务描述
      */
     private String serviceContent;
-
     /**
      * 流程模型ID
      */
     private Long processModelId;
-
     /**
      * 启动任务ID
      */
     private Long startTaskId;
-
     /**
      * 服务项类型
      */
     private Long serviceItemType;
-
     /**
      * 流程模型名称
      */
     private String processModelName;
-
     /**
      * 服务场景
      */
     private String serviceItemScene;
-
     /**
      * 服务时间
      */
     private String serviceDate;
-
     /**
      * SLA ID
      */
     private Long slaId;
-
     /**
-     * 
+     *
      */
     private Date createDate;
-
     /**
-     * 
+     *
      */
     private Date updateDate;
-
     /**
      * 针对门户用户过滤的字段列表
      */
     private String filterFields;
-
     /**
      * 产品组id
      */
     private Long productGroupId;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
@@ -247,28 +232,28 @@ public class ItsmServiceItemTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Date getCreateDate() {
         return createDate;
     }
 
     /**
-     * 
+     *
      */
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
     /**
-     * 
+     *
      */
     public Date getUpdateDate() {
         return updateDate;
     }
 
     /**
-     * 
+     *
      */
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
@@ -315,20 +300,20 @@ public class ItsmServiceItemTarget implements Serializable {
         }
         ItsmServiceItemTarget other = (ItsmServiceItemTarget) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getServiceItemName() == null ? other.getServiceItemName() == null : this.getServiceItemName().equals(other.getServiceItemName()))
-            && (this.getServiceItemHead() == null ? other.getServiceItemHead() == null : this.getServiceItemHead().equals(other.getServiceItemHead()))
-            && (this.getServiceContent() == null ? other.getServiceContent() == null : this.getServiceContent().equals(other.getServiceContent()))
-            && (this.getProcessModelId() == null ? other.getProcessModelId() == null : this.getProcessModelId().equals(other.getProcessModelId()))
-            && (this.getStartTaskId() == null ? other.getStartTaskId() == null : this.getStartTaskId().equals(other.getStartTaskId()))
-            && (this.getServiceItemType() == null ? other.getServiceItemType() == null : this.getServiceItemType().equals(other.getServiceItemType()))
-            && (this.getProcessModelName() == null ? other.getProcessModelName() == null : this.getProcessModelName().equals(other.getProcessModelName()))
-            && (this.getServiceItemScene() == null ? other.getServiceItemScene() == null : this.getServiceItemScene().equals(other.getServiceItemScene()))
-            && (this.getServiceDate() == null ? other.getServiceDate() == null : this.getServiceDate().equals(other.getServiceDate()))
-            && (this.getSlaId() == null ? other.getSlaId() == null : this.getSlaId().equals(other.getSlaId()))
-            && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
-            && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
-            && (this.getFilterFields() == null ? other.getFilterFields() == null : this.getFilterFields().equals(other.getFilterFields()))
-            && (this.getProductGroupId() == null ? other.getProductGroupId() == null : this.getProductGroupId().equals(other.getProductGroupId()));
+                && (this.getServiceItemName() == null ? other.getServiceItemName() == null : this.getServiceItemName().equals(other.getServiceItemName()))
+                && (this.getServiceItemHead() == null ? other.getServiceItemHead() == null : this.getServiceItemHead().equals(other.getServiceItemHead()))
+                && (this.getServiceContent() == null ? other.getServiceContent() == null : this.getServiceContent().equals(other.getServiceContent()))
+                && (this.getProcessModelId() == null ? other.getProcessModelId() == null : this.getProcessModelId().equals(other.getProcessModelId()))
+                && (this.getStartTaskId() == null ? other.getStartTaskId() == null : this.getStartTaskId().equals(other.getStartTaskId()))
+                && (this.getServiceItemType() == null ? other.getServiceItemType() == null : this.getServiceItemType().equals(other.getServiceItemType()))
+                && (this.getProcessModelName() == null ? other.getProcessModelName() == null : this.getProcessModelName().equals(other.getProcessModelName()))
+                && (this.getServiceItemScene() == null ? other.getServiceItemScene() == null : this.getServiceItemScene().equals(other.getServiceItemScene()))
+                && (this.getServiceDate() == null ? other.getServiceDate() == null : this.getServiceDate().equals(other.getServiceDate()))
+                && (this.getSlaId() == null ? other.getSlaId() == null : this.getSlaId().equals(other.getSlaId()))
+                && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
+                && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
+                && (this.getFilterFields() == null ? other.getFilterFields() == null : this.getFilterFields().equals(other.getFilterFields()))
+                && (this.getProductGroupId() == null ? other.getProductGroupId() == null : this.getProductGroupId().equals(other.getProductGroupId()));
     }
 
     @Override

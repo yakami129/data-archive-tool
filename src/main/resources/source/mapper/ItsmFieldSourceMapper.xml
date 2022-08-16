@@ -5,30 +5,30 @@
 <mapper namespace="com.skyjun.datamigration.source.mapper.ItsmFieldSourceMapper">
 
     <resultMap id="BaseResultMap" type="com.skyjun.datamigration.source.entity.ItsmFieldSource">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="fieldNum" column="field_num" jdbcType="VARCHAR"/>
-            <result property="fieldName" column="field_name" jdbcType="VARCHAR"/>
-            <result property="fieldDataType" column="field_data_type" jdbcType="VARCHAR"/>
-            <result property="fieldControlName" column="field_control_name" jdbcType="VARCHAR"/>
-            <result property="fieldControlType" column="field_control_type" jdbcType="VARCHAR"/>
-            <result property="fieldDefaultValue" column="field_default_value" jdbcType="VARCHAR"/>
-            <result property="fieldExtendJson" column="field_extend_json" jdbcType="VARCHAR"/>
-            <result property="fieldExtendUrl" column="field_extend_url" jdbcType="VARCHAR"/>
-            <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
-            <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
-            <result property="fieldIco" column="field_ico" jdbcType="VARCHAR"/>
-            <result property="fieldMax" column="field_max" jdbcType="FLOAT"/>
-            <result property="fieldMin" column="field_min" jdbcType="FLOAT"/>
-            <result property="fieldRetainedDecimal" column="field_retained_decimal" jdbcType="BIGINT"/>
-            <result property="fieldCompany" column="field_company" jdbcType="VARCHAR"/>
-            <result property="fieldIsDateOnly" column="field_is_date_only" jdbcType="BIGINT"/>
-            <result property="fieldIsBuiltin" column="field_is_builtIn" jdbcType="BIGINT"/>
-            <result property="configuration" column="configuration" jdbcType="VARCHAR"/>
-            <result property="selectConfig" column="select_config" jdbcType="VARCHAR"/>
-            <result property="isUpdate" column="is_update" jdbcType="BIGINT"/>
-            <result property="sysField" column="sys_field" jdbcType="BIGINT"/>
-            <result property="remark" column="remark" jdbcType="VARCHAR"/>
-            <result property="needRequest" column="need_request" jdbcType="BIGINT"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="fieldNum" column="field_num" jdbcType="VARCHAR"/>
+        <result property="fieldName" column="field_name" jdbcType="VARCHAR"/>
+        <result property="fieldDataType" column="field_data_type" jdbcType="VARCHAR"/>
+        <result property="fieldControlName" column="field_control_name" jdbcType="VARCHAR"/>
+        <result property="fieldControlType" column="field_control_type" jdbcType="VARCHAR"/>
+        <result property="fieldDefaultValue" column="field_default_value" jdbcType="VARCHAR"/>
+        <result property="fieldExtendJson" column="field_extend_json" jdbcType="VARCHAR"/>
+        <result property="fieldExtendUrl" column="field_extend_url" jdbcType="VARCHAR"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+        <result property="fieldIco" column="field_ico" jdbcType="VARCHAR"/>
+        <result property="fieldMax" column="field_max" jdbcType="FLOAT"/>
+        <result property="fieldMin" column="field_min" jdbcType="FLOAT"/>
+        <result property="fieldRetainedDecimal" column="field_retained_decimal" jdbcType="BIGINT"/>
+        <result property="fieldCompany" column="field_company" jdbcType="VARCHAR"/>
+        <result property="fieldIsDateOnly" column="field_is_date_only" jdbcType="BIGINT"/>
+        <result property="fieldIsBuiltin" column="field_is_builtIn" jdbcType="BIGINT"/>
+        <result property="configuration" column="configuration" jdbcType="VARCHAR"/>
+        <result property="selectConfig" column="select_config" jdbcType="VARCHAR"/>
+        <result property="isUpdate" column="is_update" jdbcType="BIGINT"/>
+        <result property="sysField" column="sys_field" jdbcType="BIGINT"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+        <result property="needRequest" column="need_request" jdbcType="BIGINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">

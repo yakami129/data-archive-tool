@@ -5,11 +5,11 @@
 <mapper namespace="com.skyjun.datamigration.target.mapper.ItsmServiceWorkUserDepartmentTargetMapper">
 
     <resultMap id="BaseResultMap" type="com.skyjun.datamigration.target.entity.ItsmServiceWorkUserDepartmentTarget">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="departmentId" column="department_id" jdbcType="BIGINT"/>
-            <result property="serviceWorkId" column="service_work_id" jdbcType="BIGINT"/>
-            <result property="type" column="type" jdbcType="INTEGER"/>
-            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="departmentId" column="department_id" jdbcType="BIGINT"/>
+        <result property="serviceWorkId" column="service_work_id" jdbcType="BIGINT"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="BIGINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">

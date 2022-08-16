@@ -4,57 +4,51 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
- * 
  * @TableName itsm_service_type
  */
-@TableName(value ="itsm_service_type")
+@TableName(value = "itsm_service_type")
 public class ItsmServiceTypeSource implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
      * 前端使用的扩展字段
      */
     private String configuration;
-
     /**
      * 描述
      */
     private String serviceTypeContent;
-
     /**
      * 类别名称
      */
     private String serviceTypeName;
-
     /**
-     * 
+     *
      */
     private Integer count;
-
     /**
      * 是否删除
      */
     private Long isDelete;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
@@ -103,14 +97,14 @@ public class ItsmServiceTypeSource implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Integer getCount() {
         return count;
     }
 
     /**
-     * 
+     *
      */
     public void setCount(Integer count) {
         this.count = count;
@@ -143,11 +137,11 @@ public class ItsmServiceTypeSource implements Serializable {
         }
         ItsmServiceTypeSource other = (ItsmServiceTypeSource) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
-            && (this.getServiceTypeContent() == null ? other.getServiceTypeContent() == null : this.getServiceTypeContent().equals(other.getServiceTypeContent()))
-            && (this.getServiceTypeName() == null ? other.getServiceTypeName() == null : this.getServiceTypeName().equals(other.getServiceTypeName()))
-            && (this.getCount() == null ? other.getCount() == null : this.getCount().equals(other.getCount()))
-            && (this.getIsDelete() == null ? other.getIsDelete() == null : this.getIsDelete().equals(other.getIsDelete()));
+                && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
+                && (this.getServiceTypeContent() == null ? other.getServiceTypeContent() == null : this.getServiceTypeContent().equals(other.getServiceTypeContent()))
+                && (this.getServiceTypeName() == null ? other.getServiceTypeName() == null : this.getServiceTypeName().equals(other.getServiceTypeName()))
+                && (this.getCount() == null ? other.getCount() == null : this.getCount().equals(other.getCount()))
+                && (this.getIsDelete() == null ? other.getIsDelete() == null : this.getIsDelete().equals(other.getIsDelete()));
     }
 
     @Override

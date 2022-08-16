@@ -4,138 +4,116 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 
  * @TableName itsm_service_items
  */
-@TableName(value ="itsm_service_items")
+@TableName(value = "itsm_service_items")
 public class ItsmServiceItemsSource implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
      * 前端使用的扩展字段
      */
     private String configuration;
-
     /**
      * 创建时间
      */
     private Date createdDate;
-
     /**
      * 过滤字段列表
      */
     private String filterFields;
-
     /**
      * 服务类别id
      */
     private Long itemTypeId;
-
     /**
      * 服务类别名称
      */
     private String itemTypeName;
-
     /**
      * 流程id
      */
     private Long processModelId;
-
     /**
      * 流程名称
      */
     private String processModelName;
-
     /**
      * 产品组id
      */
     private Long productGroupId;
-
     /**
      * 服务时间id
      */
     private Long serviceDateId;
-
     /**
      * 服务项描述
      */
     private String serviceItemContent;
-
     /**
      * 服务项名称
      */
     private String serviceItemName;
-
     /**
      * 服务项类型
      */
     private Long serviceItemType;
-
     /**
      * slaId
      */
     private Long slaId;
-
     /**
      * 任务id
      */
     private Long startTaskId;
-
     /**
      * 更新时间
      */
     private Date updatedDate;
-
     /**
      * 产品组名称
      */
     private String productGroupName;
-
     /**
      * 服务类型
      */
     private Long serviceType;
-
     /**
      * 头像颜色
      */
     private String headColor;
-
     /**
      * 头像名称
      */
     private String headName;
-
     /**
      * 是否配置到移动端
      */
     private Boolean moveconfig;
-
     /**
      * 是否删除
      */
     private Long isDelete;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
@@ -448,27 +426,27 @@ public class ItsmServiceItemsSource implements Serializable {
         }
         ItsmServiceItemsSource other = (ItsmServiceItemsSource) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
-            && (this.getCreatedDate() == null ? other.getCreatedDate() == null : this.getCreatedDate().equals(other.getCreatedDate()))
-            && (this.getFilterFields() == null ? other.getFilterFields() == null : this.getFilterFields().equals(other.getFilterFields()))
-            && (this.getItemTypeId() == null ? other.getItemTypeId() == null : this.getItemTypeId().equals(other.getItemTypeId()))
-            && (this.getItemTypeName() == null ? other.getItemTypeName() == null : this.getItemTypeName().equals(other.getItemTypeName()))
-            && (this.getProcessModelId() == null ? other.getProcessModelId() == null : this.getProcessModelId().equals(other.getProcessModelId()))
-            && (this.getProcessModelName() == null ? other.getProcessModelName() == null : this.getProcessModelName().equals(other.getProcessModelName()))
-            && (this.getProductGroupId() == null ? other.getProductGroupId() == null : this.getProductGroupId().equals(other.getProductGroupId()))
-            && (this.getServiceDateId() == null ? other.getServiceDateId() == null : this.getServiceDateId().equals(other.getServiceDateId()))
-            && (this.getServiceItemContent() == null ? other.getServiceItemContent() == null : this.getServiceItemContent().equals(other.getServiceItemContent()))
-            && (this.getServiceItemName() == null ? other.getServiceItemName() == null : this.getServiceItemName().equals(other.getServiceItemName()))
-            && (this.getServiceItemType() == null ? other.getServiceItemType() == null : this.getServiceItemType().equals(other.getServiceItemType()))
-            && (this.getSlaId() == null ? other.getSlaId() == null : this.getSlaId().equals(other.getSlaId()))
-            && (this.getStartTaskId() == null ? other.getStartTaskId() == null : this.getStartTaskId().equals(other.getStartTaskId()))
-            && (this.getUpdatedDate() == null ? other.getUpdatedDate() == null : this.getUpdatedDate().equals(other.getUpdatedDate()))
-            && (this.getProductGroupName() == null ? other.getProductGroupName() == null : this.getProductGroupName().equals(other.getProductGroupName()))
-            && (this.getServiceType() == null ? other.getServiceType() == null : this.getServiceType().equals(other.getServiceType()))
-            && (this.getHeadColor() == null ? other.getHeadColor() == null : this.getHeadColor().equals(other.getHeadColor()))
-            && (this.getHeadName() == null ? other.getHeadName() == null : this.getHeadName().equals(other.getHeadName()))
-            && (this.getMoveconfig() == null ? other.getMoveconfig() == null : this.getMoveconfig().equals(other.getMoveconfig()))
-            && (this.getIsDelete() == null ? other.getIsDelete() == null : this.getIsDelete().equals(other.getIsDelete()));
+                && (this.getConfiguration() == null ? other.getConfiguration() == null : this.getConfiguration().equals(other.getConfiguration()))
+                && (this.getCreatedDate() == null ? other.getCreatedDate() == null : this.getCreatedDate().equals(other.getCreatedDate()))
+                && (this.getFilterFields() == null ? other.getFilterFields() == null : this.getFilterFields().equals(other.getFilterFields()))
+                && (this.getItemTypeId() == null ? other.getItemTypeId() == null : this.getItemTypeId().equals(other.getItemTypeId()))
+                && (this.getItemTypeName() == null ? other.getItemTypeName() == null : this.getItemTypeName().equals(other.getItemTypeName()))
+                && (this.getProcessModelId() == null ? other.getProcessModelId() == null : this.getProcessModelId().equals(other.getProcessModelId()))
+                && (this.getProcessModelName() == null ? other.getProcessModelName() == null : this.getProcessModelName().equals(other.getProcessModelName()))
+                && (this.getProductGroupId() == null ? other.getProductGroupId() == null : this.getProductGroupId().equals(other.getProductGroupId()))
+                && (this.getServiceDateId() == null ? other.getServiceDateId() == null : this.getServiceDateId().equals(other.getServiceDateId()))
+                && (this.getServiceItemContent() == null ? other.getServiceItemContent() == null : this.getServiceItemContent().equals(other.getServiceItemContent()))
+                && (this.getServiceItemName() == null ? other.getServiceItemName() == null : this.getServiceItemName().equals(other.getServiceItemName()))
+                && (this.getServiceItemType() == null ? other.getServiceItemType() == null : this.getServiceItemType().equals(other.getServiceItemType()))
+                && (this.getSlaId() == null ? other.getSlaId() == null : this.getSlaId().equals(other.getSlaId()))
+                && (this.getStartTaskId() == null ? other.getStartTaskId() == null : this.getStartTaskId().equals(other.getStartTaskId()))
+                && (this.getUpdatedDate() == null ? other.getUpdatedDate() == null : this.getUpdatedDate().equals(other.getUpdatedDate()))
+                && (this.getProductGroupName() == null ? other.getProductGroupName() == null : this.getProductGroupName().equals(other.getProductGroupName()))
+                && (this.getServiceType() == null ? other.getServiceType() == null : this.getServiceType().equals(other.getServiceType()))
+                && (this.getHeadColor() == null ? other.getHeadColor() == null : this.getHeadColor().equals(other.getHeadColor()))
+                && (this.getHeadName() == null ? other.getHeadName() == null : this.getHeadName().equals(other.getHeadName()))
+                && (this.getMoveconfig() == null ? other.getMoveconfig() == null : this.getMoveconfig().equals(other.getMoveconfig()))
+                && (this.getIsDelete() == null ? other.getIsDelete() == null : this.getIsDelete().equals(other.getIsDelete()));
     }
 
     @Override

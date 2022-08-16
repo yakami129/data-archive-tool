@@ -4,437 +4,358 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 
  * @TableName itsm_service_work_list
  */
-@TableName(value ="itsm_service_work_list")
+@TableName(value = "itsm_service_work_list")
 public class ItsmServiceWorkListTarget implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
-     * 
+     *
      */
     private String serviceWorkNum;
-
     /**
      * 服务目录id
      */
     private Long serviceDirectoryId;
-
     /**
      * 服务项id
      */
     private Long serviceItemId;
-
     /**
      * 流程模型ID
      */
     private Long processModelId;
-
     /**
      * 流程ID
      */
     private String processId;
-
     /**
      * 当前处理人名称
      */
     private String currentAssignorName;
-
     /**
      * 当前处理人Id
      */
     private Long currentAssignorId;
-
     /**
      * 当前处理人列表
      */
     private String currentAssignorIds;
-
     /**
      * 当前分配方式
      */
     private Long currentDistributionMode;
-
     /**
      * 当前任务ID
      */
     private Long currentTaskId;
-
     /**
      * 当前任务名称
      */
     private String currentTaskName;
-
     /**
      * 当前任务序号
      */
     private Long currentTaskSerialNumber;
-
     /**
      * 服务工单发起人ID
      */
     private Long initiatorId;
-
     /**
      * 服务工单发起人名称
      */
     private String initiatorName;
-
     /**
      * 服务工单发起人头像
      */
     private String itsmImgPath;
-
     /**
      * 是否完成
      */
     private Long complete;
-
     /**
      * 创建时间
      */
     private Date createDate;
-
     /**
      * 更新时间
      */
     private Date updateDate;
-
     /**
      * 处理状态
      */
     private Long disposeStatus;
-
     /**
      * 服务项类型
      */
     private Long serviceItemType;
-
     /**
-     * 
+     *
      */
     private String title;
-
     /**
      * 级别
      */
     private String disposeLevel;
-
     /**
-     * 
+     *
      */
     private String content;
-
     /**
      * 响应时间
      */
     private Date responseDate;
-
     /**
      * 关闭时间
      */
     private Date endDate;
-
     /**
      * 是否是变更
      */
     private Long isChange;
-
     /**
-     * 
+     *
      */
     private String triggerForm;
-
     /**
      * 是否是历史记录，1：是，0：否
      */
     private Long hiStatus;
-
     /**
      * 触发变更id
      */
     private String eventNum;
-
     /**
      * 触发变更id
      */
     private Long requestChangeId;
-
     /**
      * 触发变更编号
      */
     private String requestChangeNum;
-
     /**
      * 关联ci名称
      */
     private String ciName;
-
     /**
      * 关联问题id
      */
     private Long requestProblemId;
-
     /**
      * 关联问题编号
      */
     private String requestProblemNum;
-
     /**
      * 事件来源
      */
     private String eventSource;
-
     /**
      * 事件状态
      */
     private String eventStatus;
-
     /**
      * 事件引用id
      */
     private Long rfId;
-
     /**
      * 关联的服务请求列表
      */
     private String requestJson;
-
     /**
      * 关联服务请求
      */
     private String requestWork;
-
     /**
      * 问题id
      */
     private String eventId;
-
     /**
      * 关联ci的ID
      */
     private Long ciId;
-
     /**
      * 关联ci的类型
      */
     private String ciType;
-
     /**
      * 指派处理人
      */
     private Long assignPersonId;
-
     /**
      * 父流程执行Id
      */
     private String superProcessId;
-
     /**
      * 当前会签次数
      */
     private Long taskCount;
-
     /**
      * 人员范围
      */
     private Long staffScope;
-
     /**
      * 当前ACT任务Id
      */
     private String actTaskId;
-
     /**
      * 优先级颜色
      */
     private String color;
-
     /**
      * 影响范围
      */
     private Long influenceRange;
-
     /**
      * 是否同意
      */
     private Long isAgree;
-
     /**
      * 服务项类别id
      */
     private Long itemTypeId;
-
     /**
      * 关单人Id
      */
     private Long lastAssignorId;
-
     /**
      * 优先级Id
      */
     private Long leveId;
-
     /**
      * 旧的SLA解决时间
      */
     private Date oldSolveTime;
-
     /**
      * SLA的Id
      */
     private Long slaId;
-
     /**
      * SLA响应时间
      */
     private Date slaResponseTime;
-
     /**
      * SLA解决时间
      */
     private Date solveTime;
-
     /**
      * 紧急程度
      */
     private Long urgentLevel;
-
     /**
      * 变更类型
      */
     private String changeType;
-
     /**
      * 区域
      */
     private String region;
-
     /**
      * 是否为主事件
      */
     private Long isPrimaryEvent;
-
     /**
      * OLA通知时间
      */
     private Date noticeTime;
-
     /**
      * 请求人类型
      */
     private Long personType;
-
     /**
      * 模板id
      */
     private Long templateId;
-
     /**
      * 即将逾期通知时间
      */
     private Date soonsolveTime;
-
     /**
      * 全局状态
      */
     private Long globalStatus;
-
     /**
      * 挂起非服务时间（单位：秒）
      */
     private Long hangNonServiceTime;
-
     /**
-     * 
+     *
      */
     private Date recentHangTime;
-
     /**
      * 挂起时总时间（单位：秒）
      */
     private Long timeLeft;
-
     /**
      * 关闭表单规则是否开启
      */
     private Byte closeFormRule;
-
     /**
      * 影响范围名称
      */
     private String influenceRangeName;
-
     /**
      * 操作状态
      */
     private Byte operationStatus;
-
     /**
      * 紧急程度名称
      */
     private String urgentLevelName;
-
     /**
      * 服务台ID
      */
     private Long serviceDeskId;
-
     /**
      * 请求人id
      */
     private Long requestPersonId;
-
     /**
      * 请求人名称
      */
     private String requestPersonName;
-
     /**
      * 告警次数
      */
     private Long alarmCount;
-
     /**
      * 请求人部门ID
      */
     private Long requestPersonDepartmentId;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
     }
 
     /**
-     * 
+     *
      */
     public String getServiceWorkNum() {
         return serviceWorkNum;
     }
 
     /**
-     * 
+     *
      */
     public void setServiceWorkNum(String serviceWorkNum) {
         this.serviceWorkNum = serviceWorkNum;
@@ -707,14 +628,14 @@ public class ItsmServiceWorkListTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public String getTitle() {
         return title;
     }
 
     /**
-     * 
+     *
      */
     public void setTitle(String title) {
         this.title = title;
@@ -735,14 +656,14 @@ public class ItsmServiceWorkListTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public String getContent() {
         return content;
     }
 
     /**
-     * 
+     *
      */
     public void setContent(String content) {
         this.content = content;
@@ -791,14 +712,14 @@ public class ItsmServiceWorkListTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public String getTriggerForm() {
         return triggerForm;
     }
 
     /**
-     * 
+     *
      */
     public void setTriggerForm(String triggerForm) {
         this.triggerForm = triggerForm;
@@ -1365,14 +1286,14 @@ public class ItsmServiceWorkListTarget implements Serializable {
     }
 
     /**
-     * 
+     *
      */
     public Date getRecentHangTime() {
         return recentHangTime;
     }
 
     /**
-     * 
+     *
      */
     public void setRecentHangTime(Date recentHangTime) {
         this.recentHangTime = recentHangTime;
@@ -1531,84 +1452,84 @@ public class ItsmServiceWorkListTarget implements Serializable {
         }
         ItsmServiceWorkListTarget other = (ItsmServiceWorkListTarget) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getServiceWorkNum() == null ? other.getServiceWorkNum() == null : this.getServiceWorkNum().equals(other.getServiceWorkNum()))
-            && (this.getServiceDirectoryId() == null ? other.getServiceDirectoryId() == null : this.getServiceDirectoryId().equals(other.getServiceDirectoryId()))
-            && (this.getServiceItemId() == null ? other.getServiceItemId() == null : this.getServiceItemId().equals(other.getServiceItemId()))
-            && (this.getProcessModelId() == null ? other.getProcessModelId() == null : this.getProcessModelId().equals(other.getProcessModelId()))
-            && (this.getProcessId() == null ? other.getProcessId() == null : this.getProcessId().equals(other.getProcessId()))
-            && (this.getCurrentAssignorName() == null ? other.getCurrentAssignorName() == null : this.getCurrentAssignorName().equals(other.getCurrentAssignorName()))
-            && (this.getCurrentAssignorId() == null ? other.getCurrentAssignorId() == null : this.getCurrentAssignorId().equals(other.getCurrentAssignorId()))
-            && (this.getCurrentAssignorIds() == null ? other.getCurrentAssignorIds() == null : this.getCurrentAssignorIds().equals(other.getCurrentAssignorIds()))
-            && (this.getCurrentDistributionMode() == null ? other.getCurrentDistributionMode() == null : this.getCurrentDistributionMode().equals(other.getCurrentDistributionMode()))
-            && (this.getCurrentTaskId() == null ? other.getCurrentTaskId() == null : this.getCurrentTaskId().equals(other.getCurrentTaskId()))
-            && (this.getCurrentTaskName() == null ? other.getCurrentTaskName() == null : this.getCurrentTaskName().equals(other.getCurrentTaskName()))
-            && (this.getCurrentTaskSerialNumber() == null ? other.getCurrentTaskSerialNumber() == null : this.getCurrentTaskSerialNumber().equals(other.getCurrentTaskSerialNumber()))
-            && (this.getInitiatorId() == null ? other.getInitiatorId() == null : this.getInitiatorId().equals(other.getInitiatorId()))
-            && (this.getInitiatorName() == null ? other.getInitiatorName() == null : this.getInitiatorName().equals(other.getInitiatorName()))
-            && (this.getItsmImgPath() == null ? other.getItsmImgPath() == null : this.getItsmImgPath().equals(other.getItsmImgPath()))
-            && (this.getComplete() == null ? other.getComplete() == null : this.getComplete().equals(other.getComplete()))
-            && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
-            && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
-            && (this.getDisposeStatus() == null ? other.getDisposeStatus() == null : this.getDisposeStatus().equals(other.getDisposeStatus()))
-            && (this.getServiceItemType() == null ? other.getServiceItemType() == null : this.getServiceItemType().equals(other.getServiceItemType()))
-            && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
-            && (this.getDisposeLevel() == null ? other.getDisposeLevel() == null : this.getDisposeLevel().equals(other.getDisposeLevel()))
-            && (this.getContent() == null ? other.getContent() == null : this.getContent().equals(other.getContent()))
-            && (this.getResponseDate() == null ? other.getResponseDate() == null : this.getResponseDate().equals(other.getResponseDate()))
-            && (this.getEndDate() == null ? other.getEndDate() == null : this.getEndDate().equals(other.getEndDate()))
-            && (this.getIsChange() == null ? other.getIsChange() == null : this.getIsChange().equals(other.getIsChange()))
-            && (this.getTriggerForm() == null ? other.getTriggerForm() == null : this.getTriggerForm().equals(other.getTriggerForm()))
-            && (this.getHiStatus() == null ? other.getHiStatus() == null : this.getHiStatus().equals(other.getHiStatus()))
-            && (this.getEventNum() == null ? other.getEventNum() == null : this.getEventNum().equals(other.getEventNum()))
-            && (this.getRequestChangeId() == null ? other.getRequestChangeId() == null : this.getRequestChangeId().equals(other.getRequestChangeId()))
-            && (this.getRequestChangeNum() == null ? other.getRequestChangeNum() == null : this.getRequestChangeNum().equals(other.getRequestChangeNum()))
-            && (this.getCiName() == null ? other.getCiName() == null : this.getCiName().equals(other.getCiName()))
-            && (this.getRequestProblemId() == null ? other.getRequestProblemId() == null : this.getRequestProblemId().equals(other.getRequestProblemId()))
-            && (this.getRequestProblemNum() == null ? other.getRequestProblemNum() == null : this.getRequestProblemNum().equals(other.getRequestProblemNum()))
-            && (this.getEventSource() == null ? other.getEventSource() == null : this.getEventSource().equals(other.getEventSource()))
-            && (this.getEventStatus() == null ? other.getEventStatus() == null : this.getEventStatus().equals(other.getEventStatus()))
-            && (this.getRfId() == null ? other.getRfId() == null : this.getRfId().equals(other.getRfId()))
-            && (this.getRequestJson() == null ? other.getRequestJson() == null : this.getRequestJson().equals(other.getRequestJson()))
-            && (this.getRequestWork() == null ? other.getRequestWork() == null : this.getRequestWork().equals(other.getRequestWork()))
-            && (this.getEventId() == null ? other.getEventId() == null : this.getEventId().equals(other.getEventId()))
-            && (this.getCiId() == null ? other.getCiId() == null : this.getCiId().equals(other.getCiId()))
-            && (this.getCiType() == null ? other.getCiType() == null : this.getCiType().equals(other.getCiType()))
-            && (this.getAssignPersonId() == null ? other.getAssignPersonId() == null : this.getAssignPersonId().equals(other.getAssignPersonId()))
-            && (this.getSuperProcessId() == null ? other.getSuperProcessId() == null : this.getSuperProcessId().equals(other.getSuperProcessId()))
-            && (this.getTaskCount() == null ? other.getTaskCount() == null : this.getTaskCount().equals(other.getTaskCount()))
-            && (this.getStaffScope() == null ? other.getStaffScope() == null : this.getStaffScope().equals(other.getStaffScope()))
-            && (this.getActTaskId() == null ? other.getActTaskId() == null : this.getActTaskId().equals(other.getActTaskId()))
-            && (this.getColor() == null ? other.getColor() == null : this.getColor().equals(other.getColor()))
-            && (this.getInfluenceRange() == null ? other.getInfluenceRange() == null : this.getInfluenceRange().equals(other.getInfluenceRange()))
-            && (this.getIsAgree() == null ? other.getIsAgree() == null : this.getIsAgree().equals(other.getIsAgree()))
-            && (this.getItemTypeId() == null ? other.getItemTypeId() == null : this.getItemTypeId().equals(other.getItemTypeId()))
-            && (this.getLastAssignorId() == null ? other.getLastAssignorId() == null : this.getLastAssignorId().equals(other.getLastAssignorId()))
-            && (this.getLeveId() == null ? other.getLeveId() == null : this.getLeveId().equals(other.getLeveId()))
-            && (this.getOldSolveTime() == null ? other.getOldSolveTime() == null : this.getOldSolveTime().equals(other.getOldSolveTime()))
-            && (this.getSlaId() == null ? other.getSlaId() == null : this.getSlaId().equals(other.getSlaId()))
-            && (this.getSlaResponseTime() == null ? other.getSlaResponseTime() == null : this.getSlaResponseTime().equals(other.getSlaResponseTime()))
-            && (this.getSolveTime() == null ? other.getSolveTime() == null : this.getSolveTime().equals(other.getSolveTime()))
-            && (this.getUrgentLevel() == null ? other.getUrgentLevel() == null : this.getUrgentLevel().equals(other.getUrgentLevel()))
-            && (this.getChangeType() == null ? other.getChangeType() == null : this.getChangeType().equals(other.getChangeType()))
-            && (this.getRegion() == null ? other.getRegion() == null : this.getRegion().equals(other.getRegion()))
-            && (this.getIsPrimaryEvent() == null ? other.getIsPrimaryEvent() == null : this.getIsPrimaryEvent().equals(other.getIsPrimaryEvent()))
-            && (this.getNoticeTime() == null ? other.getNoticeTime() == null : this.getNoticeTime().equals(other.getNoticeTime()))
-            && (this.getPersonType() == null ? other.getPersonType() == null : this.getPersonType().equals(other.getPersonType()))
-            && (this.getTemplateId() == null ? other.getTemplateId() == null : this.getTemplateId().equals(other.getTemplateId()))
-            && (this.getSoonsolveTime() == null ? other.getSoonsolveTime() == null : this.getSoonsolveTime().equals(other.getSoonsolveTime()))
-            && (this.getGlobalStatus() == null ? other.getGlobalStatus() == null : this.getGlobalStatus().equals(other.getGlobalStatus()))
-            && (this.getHangNonServiceTime() == null ? other.getHangNonServiceTime() == null : this.getHangNonServiceTime().equals(other.getHangNonServiceTime()))
-            && (this.getRecentHangTime() == null ? other.getRecentHangTime() == null : this.getRecentHangTime().equals(other.getRecentHangTime()))
-            && (this.getTimeLeft() == null ? other.getTimeLeft() == null : this.getTimeLeft().equals(other.getTimeLeft()))
-            && (this.getCloseFormRule() == null ? other.getCloseFormRule() == null : this.getCloseFormRule().equals(other.getCloseFormRule()))
-            && (this.getInfluenceRangeName() == null ? other.getInfluenceRangeName() == null : this.getInfluenceRangeName().equals(other.getInfluenceRangeName()))
-            && (this.getOperationStatus() == null ? other.getOperationStatus() == null : this.getOperationStatus().equals(other.getOperationStatus()))
-            && (this.getUrgentLevelName() == null ? other.getUrgentLevelName() == null : this.getUrgentLevelName().equals(other.getUrgentLevelName()))
-            && (this.getServiceDeskId() == null ? other.getServiceDeskId() == null : this.getServiceDeskId().equals(other.getServiceDeskId()))
-            && (this.getRequestPersonId() == null ? other.getRequestPersonId() == null : this.getRequestPersonId().equals(other.getRequestPersonId()))
-            && (this.getRequestPersonName() == null ? other.getRequestPersonName() == null : this.getRequestPersonName().equals(other.getRequestPersonName()))
-            && (this.getAlarmCount() == null ? other.getAlarmCount() == null : this.getAlarmCount().equals(other.getAlarmCount()))
-            && (this.getRequestPersonDepartmentId() == null ? other.getRequestPersonDepartmentId() == null : this.getRequestPersonDepartmentId().equals(other.getRequestPersonDepartmentId()));
+                && (this.getServiceWorkNum() == null ? other.getServiceWorkNum() == null : this.getServiceWorkNum().equals(other.getServiceWorkNum()))
+                && (this.getServiceDirectoryId() == null ? other.getServiceDirectoryId() == null : this.getServiceDirectoryId().equals(other.getServiceDirectoryId()))
+                && (this.getServiceItemId() == null ? other.getServiceItemId() == null : this.getServiceItemId().equals(other.getServiceItemId()))
+                && (this.getProcessModelId() == null ? other.getProcessModelId() == null : this.getProcessModelId().equals(other.getProcessModelId()))
+                && (this.getProcessId() == null ? other.getProcessId() == null : this.getProcessId().equals(other.getProcessId()))
+                && (this.getCurrentAssignorName() == null ? other.getCurrentAssignorName() == null : this.getCurrentAssignorName().equals(other.getCurrentAssignorName()))
+                && (this.getCurrentAssignorId() == null ? other.getCurrentAssignorId() == null : this.getCurrentAssignorId().equals(other.getCurrentAssignorId()))
+                && (this.getCurrentAssignorIds() == null ? other.getCurrentAssignorIds() == null : this.getCurrentAssignorIds().equals(other.getCurrentAssignorIds()))
+                && (this.getCurrentDistributionMode() == null ? other.getCurrentDistributionMode() == null : this.getCurrentDistributionMode().equals(other.getCurrentDistributionMode()))
+                && (this.getCurrentTaskId() == null ? other.getCurrentTaskId() == null : this.getCurrentTaskId().equals(other.getCurrentTaskId()))
+                && (this.getCurrentTaskName() == null ? other.getCurrentTaskName() == null : this.getCurrentTaskName().equals(other.getCurrentTaskName()))
+                && (this.getCurrentTaskSerialNumber() == null ? other.getCurrentTaskSerialNumber() == null : this.getCurrentTaskSerialNumber().equals(other.getCurrentTaskSerialNumber()))
+                && (this.getInitiatorId() == null ? other.getInitiatorId() == null : this.getInitiatorId().equals(other.getInitiatorId()))
+                && (this.getInitiatorName() == null ? other.getInitiatorName() == null : this.getInitiatorName().equals(other.getInitiatorName()))
+                && (this.getItsmImgPath() == null ? other.getItsmImgPath() == null : this.getItsmImgPath().equals(other.getItsmImgPath()))
+                && (this.getComplete() == null ? other.getComplete() == null : this.getComplete().equals(other.getComplete()))
+                && (this.getCreateDate() == null ? other.getCreateDate() == null : this.getCreateDate().equals(other.getCreateDate()))
+                && (this.getUpdateDate() == null ? other.getUpdateDate() == null : this.getUpdateDate().equals(other.getUpdateDate()))
+                && (this.getDisposeStatus() == null ? other.getDisposeStatus() == null : this.getDisposeStatus().equals(other.getDisposeStatus()))
+                && (this.getServiceItemType() == null ? other.getServiceItemType() == null : this.getServiceItemType().equals(other.getServiceItemType()))
+                && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
+                && (this.getDisposeLevel() == null ? other.getDisposeLevel() == null : this.getDisposeLevel().equals(other.getDisposeLevel()))
+                && (this.getContent() == null ? other.getContent() == null : this.getContent().equals(other.getContent()))
+                && (this.getResponseDate() == null ? other.getResponseDate() == null : this.getResponseDate().equals(other.getResponseDate()))
+                && (this.getEndDate() == null ? other.getEndDate() == null : this.getEndDate().equals(other.getEndDate()))
+                && (this.getIsChange() == null ? other.getIsChange() == null : this.getIsChange().equals(other.getIsChange()))
+                && (this.getTriggerForm() == null ? other.getTriggerForm() == null : this.getTriggerForm().equals(other.getTriggerForm()))
+                && (this.getHiStatus() == null ? other.getHiStatus() == null : this.getHiStatus().equals(other.getHiStatus()))
+                && (this.getEventNum() == null ? other.getEventNum() == null : this.getEventNum().equals(other.getEventNum()))
+                && (this.getRequestChangeId() == null ? other.getRequestChangeId() == null : this.getRequestChangeId().equals(other.getRequestChangeId()))
+                && (this.getRequestChangeNum() == null ? other.getRequestChangeNum() == null : this.getRequestChangeNum().equals(other.getRequestChangeNum()))
+                && (this.getCiName() == null ? other.getCiName() == null : this.getCiName().equals(other.getCiName()))
+                && (this.getRequestProblemId() == null ? other.getRequestProblemId() == null : this.getRequestProblemId().equals(other.getRequestProblemId()))
+                && (this.getRequestProblemNum() == null ? other.getRequestProblemNum() == null : this.getRequestProblemNum().equals(other.getRequestProblemNum()))
+                && (this.getEventSource() == null ? other.getEventSource() == null : this.getEventSource().equals(other.getEventSource()))
+                && (this.getEventStatus() == null ? other.getEventStatus() == null : this.getEventStatus().equals(other.getEventStatus()))
+                && (this.getRfId() == null ? other.getRfId() == null : this.getRfId().equals(other.getRfId()))
+                && (this.getRequestJson() == null ? other.getRequestJson() == null : this.getRequestJson().equals(other.getRequestJson()))
+                && (this.getRequestWork() == null ? other.getRequestWork() == null : this.getRequestWork().equals(other.getRequestWork()))
+                && (this.getEventId() == null ? other.getEventId() == null : this.getEventId().equals(other.getEventId()))
+                && (this.getCiId() == null ? other.getCiId() == null : this.getCiId().equals(other.getCiId()))
+                && (this.getCiType() == null ? other.getCiType() == null : this.getCiType().equals(other.getCiType()))
+                && (this.getAssignPersonId() == null ? other.getAssignPersonId() == null : this.getAssignPersonId().equals(other.getAssignPersonId()))
+                && (this.getSuperProcessId() == null ? other.getSuperProcessId() == null : this.getSuperProcessId().equals(other.getSuperProcessId()))
+                && (this.getTaskCount() == null ? other.getTaskCount() == null : this.getTaskCount().equals(other.getTaskCount()))
+                && (this.getStaffScope() == null ? other.getStaffScope() == null : this.getStaffScope().equals(other.getStaffScope()))
+                && (this.getActTaskId() == null ? other.getActTaskId() == null : this.getActTaskId().equals(other.getActTaskId()))
+                && (this.getColor() == null ? other.getColor() == null : this.getColor().equals(other.getColor()))
+                && (this.getInfluenceRange() == null ? other.getInfluenceRange() == null : this.getInfluenceRange().equals(other.getInfluenceRange()))
+                && (this.getIsAgree() == null ? other.getIsAgree() == null : this.getIsAgree().equals(other.getIsAgree()))
+                && (this.getItemTypeId() == null ? other.getItemTypeId() == null : this.getItemTypeId().equals(other.getItemTypeId()))
+                && (this.getLastAssignorId() == null ? other.getLastAssignorId() == null : this.getLastAssignorId().equals(other.getLastAssignorId()))
+                && (this.getLeveId() == null ? other.getLeveId() == null : this.getLeveId().equals(other.getLeveId()))
+                && (this.getOldSolveTime() == null ? other.getOldSolveTime() == null : this.getOldSolveTime().equals(other.getOldSolveTime()))
+                && (this.getSlaId() == null ? other.getSlaId() == null : this.getSlaId().equals(other.getSlaId()))
+                && (this.getSlaResponseTime() == null ? other.getSlaResponseTime() == null : this.getSlaResponseTime().equals(other.getSlaResponseTime()))
+                && (this.getSolveTime() == null ? other.getSolveTime() == null : this.getSolveTime().equals(other.getSolveTime()))
+                && (this.getUrgentLevel() == null ? other.getUrgentLevel() == null : this.getUrgentLevel().equals(other.getUrgentLevel()))
+                && (this.getChangeType() == null ? other.getChangeType() == null : this.getChangeType().equals(other.getChangeType()))
+                && (this.getRegion() == null ? other.getRegion() == null : this.getRegion().equals(other.getRegion()))
+                && (this.getIsPrimaryEvent() == null ? other.getIsPrimaryEvent() == null : this.getIsPrimaryEvent().equals(other.getIsPrimaryEvent()))
+                && (this.getNoticeTime() == null ? other.getNoticeTime() == null : this.getNoticeTime().equals(other.getNoticeTime()))
+                && (this.getPersonType() == null ? other.getPersonType() == null : this.getPersonType().equals(other.getPersonType()))
+                && (this.getTemplateId() == null ? other.getTemplateId() == null : this.getTemplateId().equals(other.getTemplateId()))
+                && (this.getSoonsolveTime() == null ? other.getSoonsolveTime() == null : this.getSoonsolveTime().equals(other.getSoonsolveTime()))
+                && (this.getGlobalStatus() == null ? other.getGlobalStatus() == null : this.getGlobalStatus().equals(other.getGlobalStatus()))
+                && (this.getHangNonServiceTime() == null ? other.getHangNonServiceTime() == null : this.getHangNonServiceTime().equals(other.getHangNonServiceTime()))
+                && (this.getRecentHangTime() == null ? other.getRecentHangTime() == null : this.getRecentHangTime().equals(other.getRecentHangTime()))
+                && (this.getTimeLeft() == null ? other.getTimeLeft() == null : this.getTimeLeft().equals(other.getTimeLeft()))
+                && (this.getCloseFormRule() == null ? other.getCloseFormRule() == null : this.getCloseFormRule().equals(other.getCloseFormRule()))
+                && (this.getInfluenceRangeName() == null ? other.getInfluenceRangeName() == null : this.getInfluenceRangeName().equals(other.getInfluenceRangeName()))
+                && (this.getOperationStatus() == null ? other.getOperationStatus() == null : this.getOperationStatus().equals(other.getOperationStatus()))
+                && (this.getUrgentLevelName() == null ? other.getUrgentLevelName() == null : this.getUrgentLevelName().equals(other.getUrgentLevelName()))
+                && (this.getServiceDeskId() == null ? other.getServiceDeskId() == null : this.getServiceDeskId().equals(other.getServiceDeskId()))
+                && (this.getRequestPersonId() == null ? other.getRequestPersonId() == null : this.getRequestPersonId().equals(other.getRequestPersonId()))
+                && (this.getRequestPersonName() == null ? other.getRequestPersonName() == null : this.getRequestPersonName().equals(other.getRequestPersonName()))
+                && (this.getAlarmCount() == null ? other.getAlarmCount() == null : this.getAlarmCount().equals(other.getAlarmCount()))
+                && (this.getRequestPersonDepartmentId() == null ? other.getRequestPersonDepartmentId() == null : this.getRequestPersonDepartmentId().equals(other.getRequestPersonDepartmentId()));
     }
 
     @Override

@@ -5,39 +5,39 @@
 <mapper namespace="com.skyjun.datamigration.source.mapper.ItsmTaskSourceMapper">
 
     <resultMap id="BaseResultMap" type="com.skyjun.datamigration.source.entity.ItsmTaskSource">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="actPid" column="act_pid" jdbcType="BIGINT"/>
-            <result property="taskName" column="task_name" jdbcType="VARCHAR"/>
-            <result property="taskDescribe" column="task_describe" jdbcType="VARCHAR"/>
-            <result property="taskAssignorId" column="task_assignor_Id" jdbcType="BIGINT"/>
-            <result property="taskAssignorName" column="task_assignor_name" jdbcType="VARCHAR"/>
-            <result property="taskPosition" column="task_position" jdbcType="BIGINT"/>
-            <result property="staffScope" column="staff_scope" jdbcType="BIGINT"/>
-            <result property="taskDistributionMode" column="task_distribution_mode" jdbcType="BIGINT"/>
-            <result property="sequenceFlowType" column="sequence_flow_type" jdbcType="VARCHAR"/>
-            <result property="nextTask" column="next_task" jdbcType="VARCHAR"/>
-            <result property="changeInput" column="change_input" jdbcType="VARCHAR"/>
-            <result property="dynamicTask" column="dynamic_task" jdbcType="VARCHAR"/>
-            <result property="transferBool" column="transfer_bool" jdbcType="BIGINT"/>
-            <result property="taskRejectBool" column="task_reject_bool" jdbcType="BIGINT"/>
-            <result property="transferTime" column="transfer_time" jdbcType="BIGINT"/>
-            <result property="bindActPid" column="bind_act_pid" jdbcType="BIGINT"/>
-            <result property="category" column="category" jdbcType="VARCHAR"/>
-            <result property="sysNoticeBool" column="sys_notice_bool" jdbcType="BIGINT"/>
-            <result property="configuration" column="configuration" jdbcType="VARCHAR"/>
-            <result property="olaId" column="ola_id" jdbcType="BIGINT"/>
-            <result property="outParamBool" column="out_param_bool" jdbcType="BIGINT"/>
-            <result property="outParamJson" column="out_param_json" jdbcType="VARCHAR"/>
-            <result property="serviceTaskFieldVal" column="service_task_field_val" jdbcType="VARCHAR"/>
-            <result property="assignBool" column="assign_bool" jdbcType="BIGINT"/>
-            <result property="assignTimeOut" column="assign_time_out" jdbcType="BIGINT"/>
-            <result property="assignType" column="assign_type" jdbcType="BIGINT"/>
-            <result property="outParamType" column="out_param_type" jdbcType="VARCHAR"/>
-            <result property="template" column="template" jdbcType="VARCHAR"/>
-            <result property="distributionRule" column="distribution_rule" jdbcType="BIGINT"/>
-            <result property="manyPeopleRule" column="many_people_rule" jdbcType="BIGINT"/>
-            <result property="staffScopeType" column="staff_scope_type" jdbcType="BIGINT"/>
-            <result property="hfiveNohandle" column="hfive_nohandle" jdbcType="BIGINT"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="actPid" column="act_pid" jdbcType="BIGINT"/>
+        <result property="taskName" column="task_name" jdbcType="VARCHAR"/>
+        <result property="taskDescribe" column="task_describe" jdbcType="VARCHAR"/>
+        <result property="taskAssignorId" column="task_assignor_Id" jdbcType="BIGINT"/>
+        <result property="taskAssignorName" column="task_assignor_name" jdbcType="VARCHAR"/>
+        <result property="taskPosition" column="task_position" jdbcType="BIGINT"/>
+        <result property="staffScope" column="staff_scope" jdbcType="BIGINT"/>
+        <result property="taskDistributionMode" column="task_distribution_mode" jdbcType="BIGINT"/>
+        <result property="sequenceFlowType" column="sequence_flow_type" jdbcType="VARCHAR"/>
+        <result property="nextTask" column="next_task" jdbcType="VARCHAR"/>
+        <result property="changeInput" column="change_input" jdbcType="VARCHAR"/>
+        <result property="dynamicTask" column="dynamic_task" jdbcType="VARCHAR"/>
+        <result property="transferBool" column="transfer_bool" jdbcType="BIGINT"/>
+        <result property="taskRejectBool" column="task_reject_bool" jdbcType="BIGINT"/>
+        <result property="transferTime" column="transfer_time" jdbcType="BIGINT"/>
+        <result property="bindActPid" column="bind_act_pid" jdbcType="BIGINT"/>
+        <result property="category" column="category" jdbcType="VARCHAR"/>
+        <result property="sysNoticeBool" column="sys_notice_bool" jdbcType="BIGINT"/>
+        <result property="configuration" column="configuration" jdbcType="VARCHAR"/>
+        <result property="olaId" column="ola_id" jdbcType="BIGINT"/>
+        <result property="outParamBool" column="out_param_bool" jdbcType="BIGINT"/>
+        <result property="outParamJson" column="out_param_json" jdbcType="VARCHAR"/>
+        <result property="serviceTaskFieldVal" column="service_task_field_val" jdbcType="VARCHAR"/>
+        <result property="assignBool" column="assign_bool" jdbcType="BIGINT"/>
+        <result property="assignTimeOut" column="assign_time_out" jdbcType="BIGINT"/>
+        <result property="assignType" column="assign_type" jdbcType="BIGINT"/>
+        <result property="outParamType" column="out_param_type" jdbcType="VARCHAR"/>
+        <result property="template" column="template" jdbcType="VARCHAR"/>
+        <result property="distributionRule" column="distribution_rule" jdbcType="BIGINT"/>
+        <result property="manyPeopleRule" column="many_people_rule" jdbcType="BIGINT"/>
+        <result property="staffScopeType" column="staff_scope_type" jdbcType="BIGINT"/>
+        <result property="hfiveNohandle" column="hfive_nohandle" jdbcType="BIGINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">

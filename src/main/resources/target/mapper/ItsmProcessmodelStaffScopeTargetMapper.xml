@@ -5,13 +5,13 @@
 <mapper namespace="com.skyjun.datamigration.target.mapper.ItsmProcessmodelStaffScopeTargetMapper">
 
     <resultMap id="BaseResultMap" type="com.skyjun.datamigration.target.entity.ItsmProcessmodelStaffScopeTarget">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="itsmProId" column="itsm_pro_id" jdbcType="BIGINT"/>
-            <result property="itsmTaskId" column="itsm_task_id" jdbcType="BIGINT"/>
-            <result property="itsmProUserAndGroup" column="itsm_pro_user_and_group" jdbcType="BIGINT"/>
-            <result property="itsmProType" column="itsm_pro_type" jdbcType="VARCHAR"/>
-            <result property="groupParentId" column="group_parent_id" jdbcType="BIGINT"/>
-            <result property="itsmLogin" column="itsm_login" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="itsmProId" column="itsm_pro_id" jdbcType="BIGINT"/>
+        <result property="itsmTaskId" column="itsm_task_id" jdbcType="BIGINT"/>
+        <result property="itsmProUserAndGroup" column="itsm_pro_user_and_group" jdbcType="BIGINT"/>
+        <result property="itsmProType" column="itsm_pro_type" jdbcType="VARCHAR"/>
+        <result property="groupParentId" column="group_parent_id" jdbcType="BIGINT"/>
+        <result property="itsmLogin" column="itsm_login" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">

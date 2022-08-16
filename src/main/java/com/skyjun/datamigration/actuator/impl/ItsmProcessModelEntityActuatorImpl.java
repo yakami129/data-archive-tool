@@ -41,4 +41,14 @@ public class ItsmProcessModelEntityActuatorImpl extends AbstractDataEntityActuat
     public CustomBaseMapper<ItsmProcessModelTarget> getTargetMapper() {
         return itsmProcessModelTargetMapper;
     }
+
+    @Override
+    protected ItsmProcessModelTarget convert(ItsmProcessModelSource itsmProcessModelSource, Class<ItsmProcessModelTarget> clazz) {
+        ItsmProcessModelTarget target = super.convert(itsmProcessModelSource, clazz);
+        target.setVersion(1);
+        //target.setHiStatus(1L);
+        target.setBpmn(null);
+        target.setConfiguration(null);
+        return target;
+    }
 }

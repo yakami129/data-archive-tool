@@ -4,52 +4,47 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
- * 
  * @TableName itsm_service_work_user_department
  */
-@TableName(value ="itsm_service_work_user_department")
+@TableName(value = "itsm_service_work_user_department")
 public class ItsmServiceWorkUserDepartmentTarget implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId(type = IdType.NONE)
     private Long id;
-
     /**
      * 用户部门ID
      */
     private Long departmentId;
-
     /**
      * 服务目录ID
      */
     private Long serviceWorkId;
-
     /**
      * 用户类型
      */
     private Integer type;
-
     /**
      * 用户ID
      */
     private Long userId;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
     /**
-     * 
+     *
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
     public void setId(Long id) {
         this.id = id;
@@ -124,10 +119,10 @@ public class ItsmServiceWorkUserDepartmentTarget implements Serializable {
         }
         ItsmServiceWorkUserDepartmentTarget other = (ItsmServiceWorkUserDepartmentTarget) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getDepartmentId() == null ? other.getDepartmentId() == null : this.getDepartmentId().equals(other.getDepartmentId()))
-            && (this.getServiceWorkId() == null ? other.getServiceWorkId() == null : this.getServiceWorkId().equals(other.getServiceWorkId()))
-            && (this.getType() == null ? other.getType() == null : this.getType().equals(other.getType()))
-            && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()));
+                && (this.getDepartmentId() == null ? other.getDepartmentId() == null : this.getDepartmentId().equals(other.getDepartmentId()))
+                && (this.getServiceWorkId() == null ? other.getServiceWorkId() == null : this.getServiceWorkId().equals(other.getServiceWorkId()))
+                && (this.getType() == null ? other.getType() == null : this.getType().equals(other.getType()))
+                && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()));
     }
 
     @Override

@@ -1,6 +1,5 @@
 package com.skyjun.datamigration.target.service.impl;
 
-import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.skyjun.datamigration.target.entity.ItsmFieldTarget;
 import com.skyjun.datamigration.target.mapper.ItsmFieldTargetMapper;
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Service;
  * @createDate 2022-08-12 16:31:48
  */
 @Service
-@DS("target")
+
 public class ItsmFieldTargetServiceImpl extends ServiceImpl<ItsmFieldTargetMapper, ItsmFieldTarget>
         implements ItsmFieldTargetService {
 

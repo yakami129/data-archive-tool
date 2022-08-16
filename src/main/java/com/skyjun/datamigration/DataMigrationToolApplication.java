@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(basePackages = {"com.skyjun.datamigration.source.mapper","com.skyjun.datamigration.target.mapper"})
+@MapperScan(basePackages = {"com.skyjun.datamigration.source.mapper", "com.skyjun.datamigration.target.mapper"})
 public class DataMigrationToolApplication {
 
     public static void main(String[] args) {

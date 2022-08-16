@@ -5,12 +5,12 @@
 <mapper namespace="com.skyjun.datamigration.source.mapper.ItsmServiceTypeSourceMapper">
 
     <resultMap id="BaseResultMap" type="com.skyjun.datamigration.source.entity.ItsmServiceTypeSource">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="configuration" column="configuration" jdbcType="VARCHAR"/>
-            <result property="serviceTypeContent" column="service_type_content" jdbcType="VARCHAR"/>
-            <result property="serviceTypeName" column="service_type_name" jdbcType="VARCHAR"/>
-            <result property="count" column="count" jdbcType="INTEGER"/>
-            <result property="isDelete" column="is_delete" jdbcType="BIGINT"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="configuration" column="configuration" jdbcType="VARCHAR"/>
+        <result property="serviceTypeContent" column="service_type_content" jdbcType="VARCHAR"/>
+        <result property="serviceTypeName" column="service_type_name" jdbcType="VARCHAR"/>
+        <result property="count" column="count" jdbcType="INTEGER"/>
+        <result property="isDelete" column="is_delete" jdbcType="BIGINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">

@@ -1,6 +1,5 @@
 package com.skyjun.datamigration.target.mapper;
 
-import com.baomidou.dynamic.datasource.annotation.DS;
 import com.skyjun.datamigration.core.CustomBaseMapper;
 import com.skyjun.datamigration.target.entity.ItsmFieldDataTarget;
 
@@ -10,7 +9,7 @@ import com.skyjun.datamigration.target.entity.ItsmFieldDataTarget;
  * @createDate 2022-08-12 16:31:48
  * @Entity com.skyjun.datamigration.target.entity.ItsmFieldDataTarget
  */
-@DS("target")
+
 public interface ItsmFieldDataTargetMapper extends CustomBaseMapper<ItsmFieldDataTarget> {
 
 
