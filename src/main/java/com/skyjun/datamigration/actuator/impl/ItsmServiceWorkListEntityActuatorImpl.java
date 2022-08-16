@@ -80,6 +80,11 @@ public class ItsmServiceWorkListEntityActuatorImpl extends AbstractDataEntityAct
             convert.setInitiatorName(targetPerson.getItsmName());
         }
 
+        ItsmPersonTarget lastAssignor = personComponent.getTargetPerson(convert.getLastAssignorId());
+        if (Objects.nonNull(lastAssignor)) {
+            convert.setLastAssignorId(lastAssignor.getItsmId());
+        }
+
         return convert;
     }
 }
