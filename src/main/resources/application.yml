@@ -17,7 +17,7 @@ spring:
 
 
 datamigration:
-  pagesize: 1000
+  pagesize: 2000
 
 mybatis-plus:
   mapper-locations: classpath:source/mapper/*.xml,classpath:target/mapper/*.xml
