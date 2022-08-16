@@ -50,6 +50,11 @@ public class PersonComponent {
     }
 
     public ItsmPersonTarget getTargetPerson(Long sourcePersonId) {
+
+        if (Objects.isNull(sourcePersonId)) {
+            return null;
+        }
+
         return cache.get(sourcePersonId);
     }
 

@@ -2,7 +2,7 @@ package com.skyjun.datamigration.actuator.impl;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.skyjun.datamigration.actuator.AbstractDataEntityActuator;
-import com.skyjun.datamigration.common.PrimarykeyConstants;
+import com.skyjun.datamigration.utils.PrimarykeyUtils;
 import com.skyjun.datamigration.core.CustomBaseMapper;
 import com.skyjun.datamigration.source.entity.ItsmProcessModelSource;
 import com.skyjun.datamigration.source.service.ItsmProcessModelSourceService;
@@ -46,7 +46,7 @@ public class ItsmProcessModelEntityActuatorImpl extends AbstractDataEntityActuat
     @Override
     protected ItsmProcessModelTarget convert(ItsmProcessModelSource itsmProcessModelSource, Class<ItsmProcessModelTarget> clazz) {
         ItsmProcessModelTarget target = super.convert(itsmProcessModelSource, clazz);
-        target.setId(PrimarykeyConstants.generatePrimarykey(target.getId()));
+        target.setId(PrimarykeyUtils.generatePrimarykey(target.getId()));
         target.setVersion(1);
         target.setHiStatus(1L);
         target.setBpmn(null);

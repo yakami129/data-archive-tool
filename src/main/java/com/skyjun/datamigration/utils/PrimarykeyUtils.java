@@ -1,11 +1,11 @@
-package com.skyjun.datamigration.common;
+package com.skyjun.datamigration.utils;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**
  * Created by alan on 2022/8/16.
  */
-public class PrimarykeyConstants {
+public class PrimarykeyUtils {
 
     private static final String PREFIX = "10000";
 
