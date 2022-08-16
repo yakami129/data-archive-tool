@@ -48,6 +48,8 @@ public class ItsmTaskEntityActuatorImpl extends AbstractDataEntityActuator<ItsmT
     protected ItsmTaskTarget convert(ItsmTaskSource itsmTaskSource, Class<ItsmTaskTarget> clazz) {
         ItsmTaskTarget convert = super.convert(itsmTaskSource, clazz);
         convert.setId(PrimarykeyUtils.generatePrimarykey(convert.getId()));
+        convert.setActPid(PrimarykeyUtils.generatePrimarykey(convert.getActPid()));
+        convert.setBindActPid(PrimarykeyUtils.generatePrimarykey(convert.getBindActPid()));
         return convert;
     }
 }

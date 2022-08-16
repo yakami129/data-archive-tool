@@ -48,6 +48,9 @@ public class ItsmServiceWorkEssentialEntityActuatorImpl extends AbstractDataEnti
     protected ItsmServiceWorkEssentialTarget convert(ItsmServiceWorkEssentialSource itsmServiceWorkEssentialSource, Class<ItsmServiceWorkEssentialTarget> clazz) {
         ItsmServiceWorkEssentialTarget convert = super.convert(itsmServiceWorkEssentialSource, clazz);
         convert.setId(PrimarykeyUtils.generatePrimarykey(convert.getId()));
+        convert.setItemTypeId(PrimarykeyUtils.generatePrimarykey(convert.getItemTypeId()));
+        convert.setServiceItemId(PrimarykeyUtils.generatePrimarykey(convert.getServiceItemId()));
+        convert.setWorkId(PrimarykeyUtils.generatePrimarykey(convert.getWorkId()));
         return convert;
     }
 }

@@ -59,7 +59,7 @@ public class ItsmActionRecordEntityActuatorImpl extends AbstractDataEntityActuat
         convert.setServiceDeskId(PrimarykeyUtils.generatePrimarykey(convert.getServiceDeskId()));
         convert.setWorkId(PrimarykeyUtils.generatePrimarykey(convert.getWorkId()));
 
-        ItsmPersonTarget targetPerson = personComponent.getTargetPerson(convert.getId());
+        ItsmPersonTarget targetPerson = personComponent.getTargetPerson(convert.getUserId());
         if (Objects.nonNull(targetPerson)) {
             convert.setUserId(targetPerson.getItsmId());
             convert.setUserName(targetPerson.getItsmName());

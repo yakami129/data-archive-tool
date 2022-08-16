@@ -2,13 +2,18 @@ package com.skyjun.datamigration.actuator.impl;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.skyjun.datamigration.actuator.AbstractDataEntityActuator;
-import com.skyjun.datamigration.utils.PrimarykeyUtils;
+import com.skyjun.datamigration.common.PersonComponent;
 import com.skyjun.datamigration.core.CustomBaseMapper;
 import com.skyjun.datamigration.source.entity.ItsmServiceWorkUserDepartmentSource;
 import com.skyjun.datamigration.source.service.ItsmServiceWorkUserDepartmentSourceService;
+import com.skyjun.datamigration.target.entity.ItsmPersonTarget;
 import com.skyjun.datamigration.target.entity.ItsmServiceWorkUserDepartmentTarget;
 import com.skyjun.datamigration.target.mapper.ItsmServiceWorkUserDepartmentTargetMapper;
+import com.skyjun.datamigration.utils.PrimarykeyUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.Objects;
 
 /**
  * Created by alan on 2022/8/16.
@@ -16,13 +21,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class ItsmServiceWorkUserDepartmentEntityActuatorImpl extends AbstractDataEntityActuator<ItsmServiceWorkUserDepartmentSource, ItsmServiceWorkUserDepartmentTarget> {
 
+    @Autowired
     private ItsmServiceWorkUserDepartmentSourceService itsmServiceWorkUserDepartmentSourceService;
+    @Autowired
     private ItsmServiceWorkUserDepartmentTargetMapper itsmServiceWorkUserDepartmentTargetMapper;
-
-    public ItsmServiceWorkUserDepartmentEntityActuatorImpl(ItsmServiceWorkUserDepartmentSourceService itsmServiceWorkUserDepartmentSourceService, ItsmServiceWorkUserDepartmentTargetMapper itsmServiceWorkUserDepartmentTargetMapper) {
-        this.itsmServiceWorkUserDepartmentSourceService = itsmServiceWorkUserDepartmentSourceService;
-        this.itsmServiceWorkUserDepartmentTargetMapper = itsmServiceWorkUserDepartmentTargetMapper;
-    }
+    @Autowired
+    private PersonComponent personComponent;
 
     @Override
     protected String getTableName() {
@@ -48,6 +52,14 @@ public class ItsmServiceWorkUserDepartmentEntityActuatorImpl extends AbstractDat
     protected ItsmServiceWorkUserDepartmentTarget convert(ItsmServiceWorkUserDepartmentSource itsmServiceWorkUserDepartmentSource, Class<ItsmServiceWorkUserDepartmentTarget> clazz) {
         ItsmServiceWorkUserDepartmentTarget convert = super.convert(itsmServiceWorkUserDepartmentSource, clazz);
         convert.setId(PrimarykeyUtils.generatePrimarykey(convert.getId()));
+        convert.setDepartmentId(PrimarykeyUtils.generatePrimarykey(convert.getDepartmentId()));
+        convert.setServiceWorkId(PrimarykeyUtils.generatePrimarykey(convert.getServiceWorkId()));
+
+        ItsmPersonTarget targetPerson = personComponent.getTargetPerson(convert.getUserId());
+        if (Objects.nonNull(targetPerson)) {
+            convert.setUserId(targetPerson.getItsmId());
+        }
+
         return convert;
     }
 }
