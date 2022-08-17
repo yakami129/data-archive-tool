@@ -53,6 +53,7 @@ public class ItsmServiceItemsEntityActuatorImpl extends AbstractDataEntityActuat
         convert.setProcessModelId(PrimarykeyUtils.generatePrimarykey(convert.getProcessModelId()));
         convert.setServiceItemType(PrimarykeyUtils.generatePrimarykey(convert.getServiceItemType()));
         convert.setStartTaskId(PrimarykeyUtils.generatePrimarykey(convert.getStartTaskId()));
+        convert.setIsDelete(1L);
 
         return convert;
     }

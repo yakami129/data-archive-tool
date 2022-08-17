@@ -48,6 +48,7 @@ public class ItsmServiceTypeEntityActuatorImpl extends AbstractDataEntityActuato
     protected ItsmServiceTypeTarget convert(ItsmServiceTypeSource itsmServiceTypeSource, Class<ItsmServiceTypeTarget> clazz) {
         ItsmServiceTypeTarget convert = super.convert(itsmServiceTypeSource, clazz);
         convert.setId(PrimarykeyUtils.generatePrimarykey(convert.getId()));
+        convert.setIsDelete(1L);
         return convert;
     }
 }
