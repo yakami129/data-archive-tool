@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.skyjun</groupId>
     <artifactId>data-migration-tool</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>data-migration-tool</name>
     <description>数据迁移工具</description>
     <packaging>jar</packaging>
