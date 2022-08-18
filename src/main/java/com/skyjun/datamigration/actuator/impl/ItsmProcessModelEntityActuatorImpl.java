@@ -2,12 +2,12 @@ package com.skyjun.datamigration.actuator.impl;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.skyjun.datamigration.actuator.AbstractDataEntityActuator;
-import com.skyjun.datamigration.utils.PrimarykeyUtils;
 import com.skyjun.datamigration.core.CustomBaseMapper;
 import com.skyjun.datamigration.source.entity.ItsmProcessModelSource;
 import com.skyjun.datamigration.source.service.ItsmProcessModelSourceService;
 import com.skyjun.datamigration.target.entity.ItsmProcessModelTarget;
 import com.skyjun.datamigration.target.mapper.ItsmProcessModelTargetMapper;
+import com.skyjun.datamigration.utils.PrimarykeyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

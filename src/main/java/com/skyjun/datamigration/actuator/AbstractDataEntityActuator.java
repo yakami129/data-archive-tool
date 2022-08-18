@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.common.collect.Lists;
+import com.skyjun.datamigration.actuator.impl.ItsmPersonEntityActuatorImpl;
 import com.skyjun.datamigration.config.DatamigrationProperties;
 import com.skyjun.datamigration.utils.LambdaUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -68,6 +69,7 @@ public abstract class AbstractDataEntityActuator<E, T> implements DataEntityActu
             log.info("[BIZ] 检查校验【{}】，source [{}] 与 target [{}] 的数据数量一致 >>>>>>>>>>>>>>>", getTableName(), sourceTotal, targetCount);
         } else {
             log.error("[BIZ] 检查校验【{}】，source [{}] 与 target [{}] 的数据数量不一致 >>>>>>>>>>>>>>>", getTableName(), sourceTotal, targetCount);
+            DatamigrationCentext.getInconformity().add(getTableName());
         }
 
         log.info("[BIZ]【{}】表完成同步 >>>>>>>>>>>>>>>", getTableName());
@@ -105,7 +107,7 @@ public abstract class AbstractDataEntityActuator<E, T> implements DataEntityActu
     }
 
     protected void errorHandler(Exception e) {
-
+        DatamigrationCentext.getErrorMap().put(getTableName(), e.getMessage());
     }
 
     private void insertBatch(List<T> targetList) {

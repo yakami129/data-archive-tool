@@ -1,7 +1,9 @@
 package com.skyjun.datamigration.runner;
 
+import cn.hutool.json.JSONUtil;
 import com.google.common.collect.Lists;
 import com.skyjun.datamigration.actuator.DataEntityActuator;
+import com.skyjun.datamigration.actuator.DatamigrationCentext;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -49,6 +51,14 @@ public class DataMigrationRunner implements CommandLineRunner {
         });
         sw.stop();
         log.info("[BIZ] 数据同步结束，总共耗时：{} 秒 >>>>>>>>>>>>>>>", sw.getTotalTimeSeconds());
+
+        if (DatamigrationCentext.getErrorMap().size() != 0) {
+            log.error("[BIZ] 数据同步结果，同步错误相关的表：{} >>>>>>>>>>>>>>>",JSONUtil.toJsonStr(DatamigrationCentext.getErrorMap().keys()));
+        }
+
+        if (DatamigrationCentext.getInconformity().size() != 0) {
+            log.error("[BIZ] 数据同步结果，数据不一致相关的表：{} >>>>>>>>>>>>>>>",  JSONUtil.toJsonStr(DatamigrationCentext.getInconformity()));
+        }
 
     }
 }
