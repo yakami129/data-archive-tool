@@ -1,17 +1,12 @@
 package com.skyjun.archive.task.generate.debug;
 
-import cn.hutool.core.io.IoUtil;
-import cn.hutool.core.util.RuntimeUtil;
 import com.skyjun.archive.enums.ArchiveModeEnum;
 import com.skyjun.archive.infrastructure.config.DataArchiveProperties;
 import com.skyjun.archive.infrastructure.db.entity.ArchiveConfigEntity;
+import com.skyjun.archive.task.execute.ShellCommandActuator;
 import com.skyjun.archive.task.generate.GeneratePtArchiverCmd;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.Charset;
 
 
 /**
@@ -50,15 +45,18 @@ class GeneratePtArchiverCmdDebugTest {
         String cmd = GeneratePtArchiverCmd.generateCmd(dataArchiveProperties, archiveConfigEntity);
         System.out.println("CMD:\n" + cmd);
 
-        Process log = Runtime.getRuntime().exec(cmd);
-        try (InputStream inputStream = log.getInputStream();) {
-            String read = IoUtil.read(inputStream, Charset.forName("utf-8"));
-            System.out.println(read);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            log.destroy();
-        }
+        String logs = ShellCommandActuator.exec(cmd);
+        System.out.println("logs:" + logs);
+
+    }
+
+    @Test
+    void test001() {
+
+        String cmd = "sh /Users/zhangyajun/Documents/archiver.sh";
+
+        String logs = ShellCommandActuator.exec(cmd);
+        System.out.println("logs:" + logs);
 
     }
 

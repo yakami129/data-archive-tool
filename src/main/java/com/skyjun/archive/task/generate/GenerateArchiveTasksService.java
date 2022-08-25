@@ -39,6 +39,12 @@ public class GenerateArchiveTasksService {
         // 获取当前需要生成归档任务的归档配置列表
         List<ArchiveConfigEntity> archiveConfigs = archiveConfigService.list();
         archiveConfigs = LambdaUtil.filterToList(archiveConfigs, archiveConfigEntity -> {
+
+            // TODO TEST
+            if(true){
+                return true;
+            }
+
             if (StringUtils.isBlank(archiveConfigEntity.getExecTimeWindowCron())) {
                 return false;
             }

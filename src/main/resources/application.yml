@@ -10,7 +10,7 @@ spring:
 archive:
   pt-archiver-path: /opt/homebrew/bin
   batch-size: 2000
-  txn-size: 2000
+  txn-size: 100
   archive-user: root
   archive-pwd: 123qweASD
 

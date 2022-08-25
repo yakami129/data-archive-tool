@@ -48,6 +48,9 @@ public class GeneratePtArchiverCmd {
         param.put("archiveModeEnum", ArchiveModeEnum.valueOf(archiveConfigEntity.getArchiveMode()).getCmd());
         param.put("extensionCmd", StringUtils.EMPTY);
 
+        // 去除空格
+        param.put("archiveCondition", StringUtils.trim(archiveConfigEntity.getArchiveCondition()));
+
         // 填充到VelocityContext，提供给模版使用
         VelocityContext context = new VelocityContext(param);
         return context;

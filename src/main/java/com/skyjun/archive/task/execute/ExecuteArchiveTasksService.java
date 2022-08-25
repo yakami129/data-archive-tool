@@ -9,7 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StopWatch;
 
 import java.util.Date;
@@ -28,7 +27,6 @@ public class ExecuteArchiveTasksService {
     @Autowired
     private ArchiveTasksService archiveTasksService;
 
-    @Transactional(rollbackFor = Exception.class)
     public void executeArchiveTasks() {
 
         // 获取任务状态为初始化状态的归档任务列表
@@ -70,7 +68,6 @@ public class ExecuteArchiveTasksService {
                 log.error(e.getMessage(), e);
             }
         });
-
     }
 
     private String executeShellCmd(ArchiveTasksEntity dataEntityActuator) {
@@ -100,7 +97,7 @@ public class ExecuteArchiveTasksService {
             dataEntityActuator.setSysUtime(new Date());
             archiveTasksService.updateById(dataEntityActuator);
 
-            log.info("[BIZ] 任务ID{},已经执行完成，执行结果：{}，持续时间：{}，\n执行日志：{}", dataEntityActuator.getId(), dataEntityActuator.getExecStatus(), dataEntityActuator.getExecLog());
+            log.info("[BIZ] 任务ID{},已经执行完成，执行结果：{}，持续时间：{}，执行日志：\n{}", dataEntityActuator.getId(), dataEntityActuator.getExecStatus(), totalTimeSeconds, dataEntityActuator.getExecLog());
         }
 
         return "OK";
