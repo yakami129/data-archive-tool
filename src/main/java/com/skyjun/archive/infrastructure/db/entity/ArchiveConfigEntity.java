@@ -87,9 +87,11 @@ public class ArchiveConfigEntity implements Serializable {
     private String archiveCondition;
 
     /**
-     * 执行时间窗口，如：00:00-06:00,22:00-24:00
+     * 执行时间窗口，如：0 0 2 1 * ? *
+     *
+     * 表示在每月的1日的凌晨2点执行任务
      */
-    private String execTimeWindow;
+    private String execTimeWindowCron;
 
     /**
      * 优化级，数值越高，在执行时间窗口的有多个任务时，优先执行

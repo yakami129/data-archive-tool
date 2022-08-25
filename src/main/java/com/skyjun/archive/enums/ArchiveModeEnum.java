@@ -7,25 +7,27 @@ package com.skyjun.archive.enums;
  */
 public enum ArchiveModeEnum {
 
+
+
     /**
      * archive（归档）
      */
-    archive("--bulk-delete"),
+    ARCHIVE("--bulk-delete"),
 
     /**
      * (慢模式，兼容性高)
      */
-    archive_slow("-- archive"),
+    ARCHIVE_SLOW("-- archive"),
 
     /**
      * delete(只删除不归档)
      */
-    delete("-- archive"),
+    DELETE("-- archive"),
 
     /**
      * archive-to-file(归档到文件)
      */
-    archive_to_file("-- archive");
+    ARCHIVE_TO_FILE("-- archive");
 
     private String cmd;
 

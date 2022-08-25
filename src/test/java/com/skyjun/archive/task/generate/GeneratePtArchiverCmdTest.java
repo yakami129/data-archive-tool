@@ -34,7 +34,7 @@ class GeneratePtArchiverCmdTest {
                 .destDb("itsmboot_archive")
                 .destTable("itsm_service_work_list")
 
-                .archiveMode(ArchiveModeEnum.archive.name())
+                .archiveMode(ArchiveModeEnum.ARCHIVE.name())
                 .charset("UTF8")
                 .archiveCondition("end_date<'2022-08-27'")
                 .build();

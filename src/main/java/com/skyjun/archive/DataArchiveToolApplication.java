@@ -3,13 +3,15 @@ package com.skyjun.archive;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@MapperScan(basePackages = {"com.skyjun.datamigration.source.mapper", "com.skyjun.datamigration.target.mapper"})
-public class DataMigrationToolApplication {
+@MapperScan(basePackages = {"com.skyjun.archive.infrastructure.db.mapper"})
+@EnableScheduling
+public class DataArchiveToolApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DataMigrationToolApplication.class, args);
+        SpringApplication.run(DataArchiveToolApplication.class, args);
     }
 
 }

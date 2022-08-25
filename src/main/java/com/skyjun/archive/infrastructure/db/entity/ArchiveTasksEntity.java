@@ -75,11 +75,6 @@ public class ArchiveTasksEntity implements Serializable {
     private String archiveMode;
 
     /**
-     * 执行时间窗口
-     */
-    private String execTimeWindow;
-
-    /**
      * 优化级，数值越高，在执行时间窗口的有多个任务时，优先执行
      */
     private Byte priority;

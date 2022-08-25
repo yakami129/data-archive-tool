@@ -17,18 +17,19 @@ public enum ExecStatusEnum {
     RUNNING,
 
     /**
-     * 检查不通过
+     * 执行失败
      */
-    CHECK_FAILED,
+    ERROR,
+
+    /**
+     * 执行成功
+     */
+    SUCCESS,
 
     /**
      * 等待超时
      */
     WAIT_TIMEOUT,
-
-    /**
-     * 已执行
-     */
-    DONE;
+    ;
 
 }

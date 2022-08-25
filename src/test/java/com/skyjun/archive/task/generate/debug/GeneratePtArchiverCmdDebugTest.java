@@ -1,6 +1,7 @@
 package com.skyjun.archive.task.generate.debug;
 
 import cn.hutool.core.io.IoUtil;
+import cn.hutool.core.util.RuntimeUtil;
 import com.skyjun.archive.enums.ArchiveModeEnum;
 import com.skyjun.archive.infrastructure.config.DataArchiveProperties;
 import com.skyjun.archive.infrastructure.db.entity.ArchiveConfigEntity;
@@ -41,7 +42,7 @@ class GeneratePtArchiverCmdDebugTest {
                 .destDb("itsmboot_archive")
                 .destTable("itsm_service_work_list")
 
-                .archiveMode(ArchiveModeEnum.archive.name())
+                .archiveMode(ArchiveModeEnum.ARCHIVE.name())
                 .charset("UTF8")
                 .archiveCondition("end_date<'2022-08-27'")
                 .build();
@@ -58,6 +59,7 @@ class GeneratePtArchiverCmdDebugTest {
         } finally {
             log.destroy();
         }
+
     }
 
 }

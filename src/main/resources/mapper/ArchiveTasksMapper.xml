@@ -15,7 +15,6 @@
             <result property="destDb" column="dest_db" jdbcType="VARCHAR"/>
             <result property="destTable" column="dest_table" jdbcType="VARCHAR"/>
             <result property="archiveMode" column="archive_mode" jdbcType="VARCHAR"/>
-            <result property="execTimeWindow" column="exec_time_window" jdbcType="VARCHAR"/>
             <result property="priority" column="priority" jdbcType="TINYINT"/>
             <result property="execStatus" column="exec_status" jdbcType="VARCHAR"/>
             <result property="execStart" column="exec_start" jdbcType="TIMESTAMP"/>
@@ -27,12 +26,23 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        id,source_host,source_port,
-        source_db,source_table,dest_host,
-        dest_port,dest_db,dest_table,
-        archive_mode,exec_time_window,priority,
-        exec_status,exec_start,exec_end,
-        exec_seconds,archive_cmd,exec_log,
+        id,
+        source_host,
+        source_port,
+        source_db,
+        source_table,
+        dest_host,
+        dest_port,
+        dest_db,
+        dest_table,
+        archive_mode,
+        priority,
+        exec_status,
+        exec_start,
+        exec_end,
+        exec_seconds,
+        archive_cmd,
+        exec_log,
         sys_utime
     </sql>
 </mapper>
