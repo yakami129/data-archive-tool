@@ -6,8 +6,9 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 
-datamigration:
-  pagesize: 2000
+archive:
+  pt-archiver-path: 2000
+  batch-size: 2000
 
 mybatis-plus:
   mapper-locations: classpath:source/mapper/*.xml,classpath:target/mapper/*.xml
