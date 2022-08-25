@@ -7,8 +7,6 @@ package com.skyjun.archive.enums;
  */
 public enum ArchiveModeEnum {
 
-
-
     /**
      * archive（归档）
      */
@@ -22,12 +20,12 @@ public enum ArchiveModeEnum {
     /**
      * delete(只删除不归档)
      */
-    DELETE("-- archive"),
+    DELETE("--purge"),
 
     /**
      * archive-to-file(归档到文件)
      */
-    ARCHIVE_TO_FILE("-- archive");
+    ARCHIVE_TO_FILE("--file '/opt/archive/%Y-%m-%d-%D.%t'");
 
     private String cmd;
 
