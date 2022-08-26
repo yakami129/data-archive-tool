@@ -21,6 +21,8 @@ import java.util.UUID;
 @Slf4j
 public class ShellCommandActuator {
 
+    public static final String SHELL_PATH = "../../shell";
+
     /**
      * 执行Shell 命令
      *
@@ -42,6 +44,7 @@ public class ShellCommandActuator {
             // 获取日志
             return getLogs(process);
         } catch (Exception ex) {
+            log.error(ex.getMessage(), ex);
             throw new RuntimeException(ex);
         } finally {
 
@@ -53,9 +56,15 @@ public class ShellCommandActuator {
     private static ShellFileSource createShellFile(String shellCmd) {
 
         String fileName = UUID.randomUUID().toString() + RandomUtils.nextInt(1, 100) + ".sh";
-        File shellFile = FileUtil.newFile(ShellCommandActuator.class.getClassLoader().getResource("").getPath() + "/" + fileName);
+
+        // 如果文件夹不存在创建文件夹
+        File directory = FileUtil.mkdir(SHELL_PATH);
+        directory.setExecutable(true);
+        directory.setReadable(true);
+        directory.setWritable(true);
 
         // 创建文件
+        File shellFile = FileUtil.newFile(directory.getPath() + "/" + fileName);
         try {
             shellFile.createNewFile();
             shellFile.setExecutable(true);

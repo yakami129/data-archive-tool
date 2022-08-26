@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.skyjun</groupId>
-    <artifactId>data-migration-tool</artifactId>
-    <version>1.0.3</version>
-    <name>data-migration-tool</name>
+    <artifactId>data-archive-tool</artifactId>
+    <version>1.0.0</version>
+    <name>data-archive-tool</name>
     <description>数据迁移工具</description>
     <packaging>jar</packaging>
 
