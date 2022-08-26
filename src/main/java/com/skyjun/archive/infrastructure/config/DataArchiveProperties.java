@@ -18,6 +18,13 @@ public class DataArchiveProperties {
     private String ptArchiverPath;
 
     /**
+     * 归档文件地址
+     *
+     * 默认为：/opt/archive
+     */
+    private String archiveFilePath;
+
+    /**
      * 批量每次归档的数据数量
      */
     private String batchSize;
@@ -37,48 +44,51 @@ public class DataArchiveProperties {
      */
     private String archivePwd;
 
-    public String getArchiveUser() {
-        return archiveUser;
-    }
-
-    public DataArchiveProperties setArchiveUser(String archiveUser) {
-        this.archiveUser = archiveUser;
-        return this;
-    }
-
-    public String getArchivePwd() {
-        return archivePwd;
-    }
-
-    public DataArchiveProperties setArchivePwd(String archivePwd) {
-        this.archivePwd = archivePwd;
-        return this;
-    }
-
     public String getPtArchiverPath() {
         return ptArchiverPath;
     }
 
-    public DataArchiveProperties setPtArchiverPath(String ptArchiverPath) {
+    public void setPtArchiverPath(String ptArchiverPath) {
         this.ptArchiverPath = ptArchiverPath;
-        return this;
+    }
+
+    public String getArchiveFilePath() {
+        return archiveFilePath;
+    }
+
+    public void setArchiveFilePath(String archiveFilePath) {
+        this.archiveFilePath = archiveFilePath;
     }
 
     public String getBatchSize() {
         return batchSize;
     }
 
-    public DataArchiveProperties setBatchSize(String batchSize) {
+    public void setBatchSize(String batchSize) {
         this.batchSize = batchSize;
-        return this;
     }
 
     public String getTxnSize() {
         return txnSize;
     }
 
-    public DataArchiveProperties setTxnSize(String txnSize) {
+    public void setTxnSize(String txnSize) {
         this.txnSize = txnSize;
-        return this;
+    }
+
+    public String getArchiveUser() {
+        return archiveUser;
+    }
+
+    public void setArchiveUser(String archiveUser) {
+        this.archiveUser = archiveUser;
+    }
+
+    public String getArchivePwd() {
+        return archivePwd;
+    }
+
+    public void setArchivePwd(String archivePwd) {
+        this.archivePwd = archivePwd;
     }
 }

@@ -20,7 +20,7 @@ public enum ArchiveModeEnum {
     /**
      * archive-to-file(归档到文件)
      */
-    ARCHIVE_TO_FILE("--file '/opt/archive/%D-%t-%Y-%m-%d-%H-%i-%s'");
+    ARCHIVE_TO_FILE("--file '${archiveFilePath}/%D-%t-%Y-%m-%d-%H-%i-%s'");
 
     private String cmd;
 

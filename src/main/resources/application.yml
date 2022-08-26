@@ -9,6 +9,7 @@ spring:
 
 archive:
   pt-archiver-path: /opt/homebrew/bin
+  archive-file-path: /opt/archive1
   batch-size: 2000
   txn-size: 100
   archive-user: root

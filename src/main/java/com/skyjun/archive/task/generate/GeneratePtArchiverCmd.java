@@ -21,6 +21,7 @@ import java.util.Map;
 public class GeneratePtArchiverCmd {
 
     private static final String TEMPLATE_NAME = "templates/archiverShell-";
+    private static final String DEFAULT_ARCHIVE_FILE_PATH = "/opt/archive";
 
     static {
         Velocity.setProperty(RuntimeConstants.RESOURCE_LOADER, "classpath");
@@ -51,6 +52,11 @@ public class GeneratePtArchiverCmd {
 
         // 去除空格
         param.put("archiveCondition", StringUtils.trim(archiveConfigEntity.getArchiveCondition()));
+
+        // 填充默认的归档文件路径
+        if (StringUtils.isBlank(dataArchiveProperties.getArchiveFilePath())) {
+            param.put("archiveFilePath", DEFAULT_ARCHIVE_FILE_PATH);
+        }
 
         // 填充到VelocityContext，提供给模版使用
         VelocityContext context = new VelocityContext(param);
