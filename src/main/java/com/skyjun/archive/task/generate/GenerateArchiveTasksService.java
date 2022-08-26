@@ -55,7 +55,7 @@ public class GenerateArchiveTasksService {
         List<ArchiveTasksEntity> archiveTasksEntities = LambdaUtil.listMapper(archiveConfigs, archiveConfig -> buildArchiveTasksEntity(dataArchiveProperties, archiveConfig));
         if (CollectionUtils.isNotEmpty(archiveTasksEntities)) {
             archiveTasksService.saveBatch(archiveTasksEntities);
-            log.error("[BIZ] >>>>>>>>>>>>>>>> 成功生成{}个归档任务", archiveTasksEntities.size());
+            log.info("[BIZ] >>>>>>>>>>>>>>>> 成功生成{}个归档任务", archiveTasksEntities.size());
         } else {
             log.error("[BIZ] >>>>>>>>>>>>>>>> 当前没有归档任务需要生成");
         }
