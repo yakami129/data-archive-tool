@@ -18,23 +18,6 @@ public class DataArchiveProperties {
     private String ptArchiverPath;
 
     /**
-     * 归档文件地址
-     *
-     * 默认为：/opt/archive
-     */
-    private String archiveFilePath;
-
-    /**
-     * 批量每次归档的数据数量
-     */
-    private String batchSize;
-
-    /**
-     * 指定每个事务的大小（行数）
-     */
-    private String txnSize;
-
-    /**
      * 归档账号
      */
     private String archiveUser;
@@ -44,36 +27,27 @@ public class DataArchiveProperties {
      */
     private String archivePwd;
 
+    /**
+     * 归档模式 - 归档配置
+     */
+    private ArchiveConfig archiveConfig;
+
+    /**
+     * 归档模式 - 归档到文件配置
+     */
+    private ArchiveToFileConfig archiveToFileConfig;
+
+    /**
+     * 归档模式 - 只删除不归档配置
+     */
+    private DeleteConfig deleteConfig;
+
     public String getPtArchiverPath() {
         return ptArchiverPath;
     }
 
     public void setPtArchiverPath(String ptArchiverPath) {
         this.ptArchiverPath = ptArchiverPath;
-    }
-
-    public String getArchiveFilePath() {
-        return archiveFilePath;
-    }
-
-    public void setArchiveFilePath(String archiveFilePath) {
-        this.archiveFilePath = archiveFilePath;
-    }
-
-    public String getBatchSize() {
-        return batchSize;
-    }
-
-    public void setBatchSize(String batchSize) {
-        this.batchSize = batchSize;
-    }
-
-    public String getTxnSize() {
-        return txnSize;
-    }
-
-    public void setTxnSize(String txnSize) {
-        this.txnSize = txnSize;
     }
 
     public String getArchiveUser() {
@@ -90,5 +64,29 @@ public class DataArchiveProperties {
 
     public void setArchivePwd(String archivePwd) {
         this.archivePwd = archivePwd;
+    }
+
+    public ArchiveConfig getArchiveConfig() {
+        return archiveConfig;
+    }
+
+    public void setArchiveConfig(ArchiveConfig archiveConfig) {
+        this.archiveConfig = archiveConfig;
+    }
+
+    public ArchiveToFileConfig getArchiveToFileConfig() {
+        return archiveToFileConfig;
+    }
+
+    public void setArchiveToFileConfig(ArchiveToFileConfig archiveToFileConfig) {
+        this.archiveToFileConfig = archiveToFileConfig;
+    }
+
+    public DeleteConfig getDeleteConfig() {
+        return deleteConfig;
+    }
+
+    public void setDeleteConfig(DeleteConfig deleteConfig) {
+        this.deleteConfig = deleteConfig;
     }
 }

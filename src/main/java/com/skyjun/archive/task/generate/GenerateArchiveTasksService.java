@@ -1,6 +1,8 @@
 package com.skyjun.archive.task.generate;
 
 import cn.hutool.cron.pattern.CronPattern;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.skyjun.archive.constant.ArchiveConfigConstants;
 import com.skyjun.archive.enums.ExecStatusEnum;
 import com.skyjun.archive.infrastructure.config.DataArchiveProperties;
 import com.skyjun.archive.infrastructure.db.entity.ArchiveConfigEntity;
@@ -37,11 +39,14 @@ public class GenerateArchiveTasksService {
     public void generateArchiveTasks() {
 
         // 获取当前需要生成归档任务的归档配置列表
-        List<ArchiveConfigEntity> archiveConfigs = archiveConfigService.list();
+        List<ArchiveConfigEntity> archiveConfigs = archiveConfigService.list(Wrappers
+                .lambdaQuery(ArchiveConfigEntity.class)
+                .eq(ArchiveConfigEntity::getIsEnable, ArchiveConfigConstants.TURN_ON)
+        );
         archiveConfigs = LambdaUtil.filterToList(archiveConfigs, archiveConfigEntity -> {
 
             // TODO TEST
-            if(true){
+            if (true) {
                 return true;
             }
 
@@ -79,6 +84,9 @@ public class GenerateArchiveTasksService {
 
                 .archiveMode(archiveConfig.getArchiveMode())
                 .execStatus(ExecStatusEnum.INITIAL.name())
+
+                // 优先级
+                .priority(archiveConfig.getPriority())
 
                 // 设置为当前时间
                 .execStart(new Date())

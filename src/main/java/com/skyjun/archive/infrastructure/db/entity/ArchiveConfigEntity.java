@@ -109,9 +109,9 @@ public class ArchiveConfigEntity implements Serializable {
     private Date sysUtime;
 
     /**
-     * 是否已删除
+     * 是否开启：1:开启，0:关闭
      */
-    private Byte isDeleted;
+    private Integer isEnable;
 
     /**
      * 备注信息

@@ -1,6 +1,7 @@
 package com.skyjun.archive.task.generate.debug;
 
 import com.skyjun.archive.enums.ArchiveModeEnum;
+import com.skyjun.archive.infrastructure.config.ArchiveConfig;
 import com.skyjun.archive.infrastructure.config.DataArchiveProperties;
 import com.skyjun.archive.infrastructure.db.entity.ArchiveConfigEntity;
 import com.skyjun.archive.task.execute.ShellCommandActuator;
@@ -19,8 +20,12 @@ class GeneratePtArchiverCmdDebugTest {
     void generateCmd() {
 
         DataArchiveProperties dataArchiveProperties = new DataArchiveProperties();
-        dataArchiveProperties.setBatchSize("1000");
-        dataArchiveProperties.setTxnSize("1000");
+
+        ArchiveConfig archiveConfig = new ArchiveConfig();
+        archiveConfig.setBatchSize("1000");
+        archiveConfig.setTxnSize("1000");
+        dataArchiveProperties.setArchiveConfig(archiveConfig);
+
         dataArchiveProperties.setArchiveUser("root");
         dataArchiveProperties.setArchivePwd("123qweASD");
         dataArchiveProperties.setPtArchiverPath("/opt/homebrew/bin");

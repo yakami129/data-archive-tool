@@ -1,3 +1,4 @@
+## 归档规则配置和归档任务的DB地址
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
@@ -8,12 +9,36 @@ spring:
     max-active: 100
 
 archive:
+
+  ## pt-archiver 程序的安装路径
   pt-archiver-path: /opt/homebrew/bin
-  archive-file-path: /opt/archive
-  batch-size: 2000
-  txn-size: 100
+
+  ### 业务数据库和归档数据库都需要创建一个归档账号
+  ## 归档账号
   archive-user: root
+  ## 归档密码
   archive-pwd: 123qweASD
+
+  archive-config:
+    ## 批量每次归档的数据数量
+    batch-size: 20000
+    ## 指定每个事务的大小（行数）
+    txn-size: 1000
+
+  archive-to-file-config:
+    ## 归档为文件时，文件的存放路径
+    archive-file-path: /opt/archive
+    ## 批量每次归档的数据数量
+    batch-size: 20000
+    ## 指定每个事务的大小（行数）
+    txn-size: 500
+
+  delete-config:
+    ## 批量每次归档的数据数量
+    batch-size: 20000
+    ## 指定每个事务的大小（行数）
+    txn-size: 1000
+
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml

@@ -32,7 +32,8 @@ public class ExecuteArchiveTasksService {
         // 获取任务状态为初始化状态的归档任务列表
         List<ArchiveTasksEntity> archiveTasksEntities = archiveTasksService.list(Wrappers
                 .lambdaQuery(ArchiveTasksEntity.class)
-                .eq(ArchiveTasksEntity::getExecStatus, ExecStatusEnum.INITIAL.name()));
+                .eq(ArchiveTasksEntity::getExecStatus, ExecStatusEnum.INITIAL.name())
+                .orderByAsc(ArchiveTasksEntity::getPriority));
 
         if (CollectionUtils.isEmpty(archiveTasksEntities)) {
             log.info("[BIZ] 当前没有需要执行的归档任务");

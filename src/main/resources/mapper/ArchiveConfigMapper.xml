@@ -22,7 +22,7 @@
         <result property="priority" column="priority" jdbcType="TINYINT"/>
         <result property="sysCtime" column="sys_ctime" jdbcType="TIMESTAMP"/>
         <result property="sysUtime" column="sys_utime" jdbcType="TIMESTAMP"/>
-        <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+        <result property="isEnable" column="is_deleted" jdbcType="INTEGER"/>
         <result property="remark" column="remark" jdbcType="VARCHAR"/>
     </resultMap>
 
@@ -44,7 +44,7 @@
         priority,
         sys_ctime,
         sys_utime,
-        is_deleted,
+        is_enable,
         remark
     </sql>
 </mapper>
