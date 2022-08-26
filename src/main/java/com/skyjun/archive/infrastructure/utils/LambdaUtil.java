@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * @author kaka
+ * @author alan
  * @Date 2022/4/6
  */
 public class LambdaUtil {

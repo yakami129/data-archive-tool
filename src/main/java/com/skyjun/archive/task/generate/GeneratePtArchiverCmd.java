@@ -12,6 +12,7 @@ import org.apache.velocity.runtime.RuntimeConstants;
 import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
 
 import java.io.StringWriter;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -19,7 +20,7 @@ import java.util.Map;
  */
 public class GeneratePtArchiverCmd {
 
-    private static final String TEMPLATE_NAME = "templates/archiverShell.vm";
+    private static final String TEMPLATE_NAME = "templates/archiverShell-";
 
     static {
         Velocity.setProperty(RuntimeConstants.RESOURCE_LOADER, "classpath");
@@ -32,7 +33,7 @@ public class GeneratePtArchiverCmd {
 
         // 将VelocityContext写入到模版
         StringWriter sw = new StringWriter();
-        Template tpl = Velocity.getTemplate(TEMPLATE_NAME, "UTF-8");
+        Template tpl = Velocity.getTemplate(TEMPLATE_NAME + archiveConfigEntity.getArchiveMode().toLowerCase(Locale.ROOT) + ".vm", "UTF-8");
         tpl.merge(context, sw);
 
         return sw.toString();

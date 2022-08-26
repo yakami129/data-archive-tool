@@ -21,8 +21,6 @@ import java.util.UUID;
 @Slf4j
 public class ShellCommandActuator {
 
-    private static final String NEWLINE_SYMBOL = "\\";
-
     /**
      * 执行Shell 命令
      *
@@ -55,7 +53,7 @@ public class ShellCommandActuator {
     private static ShellFileSource createShellFile(String shellCmd) {
 
         String fileName = UUID.randomUUID().toString() + RandomUtils.nextInt(1, 100) + ".sh";
-        File shellFile = FileUtil.newFile(ShellCommandActuator.class.getResource("").getPath() + "/" + fileName);
+        File shellFile = FileUtil.newFile(ShellCommandActuator.class.getClassLoader().getResource("").getPath() + "/" + fileName);
 
         // 创建文件
         try {
@@ -107,12 +105,13 @@ public class ShellCommandActuator {
     private static Process execCmd(String shellCmd) {
         Process process = null;
         try {
+
+            log.info("[BIZ] 开始执行Shell脚本：shellCmd:{}", shellCmd);
+
             process = Runtime.getRuntime().exec(shellCmd);
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());
         }
-
-        log.info("[BIZ] 执行Shell脚本中：shellCmd:{}", shellCmd);
 
         // 等待脚本执行完毕
         wait(process);

@@ -13,11 +13,6 @@ public enum ArchiveModeEnum {
     ARCHIVE("--bulk-delete"),
 
     /**
-     * (慢模式，兼容性高)
-     */
-    ARCHIVE_SLOW("-- archive"),
-
-    /**
      * delete(只删除不归档)
      */
     DELETE("--purge"),
@@ -25,7 +20,7 @@ public enum ArchiveModeEnum {
     /**
      * archive-to-file(归档到文件)
      */
-    ARCHIVE_TO_FILE("--file '/opt/archive/%Y-%m-%d-%D.%t'");
+    ARCHIVE_TO_FILE("--file '/opt/archive/%D-%t-%Y-%m-%d-%H-%i-%s'");
 
     private String cmd;
 
