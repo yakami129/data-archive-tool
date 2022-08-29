@@ -14,6 +14,10 @@
  Date: 26/08/2022 09:52:50
 */
 
+CREATE DATABASE IF NOT EXISTS `mysql_archiver` DEFAULT CHARACTER SET utf8 collate utf8_unicode_ci;
+
+USE `mysql_archiver`;
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
