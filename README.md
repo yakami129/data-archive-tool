@@ -152,14 +152,14 @@ INSERT INTO `mysql_archiver`.`archive_config` (`id`, `source_host`, `source_port
 #### （2）触发归档任务生成器，生成归档任务
 
 - 方式一：归档任务生成器会根据exec_time_window_cron的cron表达式自动生成
-- 方式二：通过API手动出发生成
+- 方式二：通过API手动触发生成
 ```
 curl http://ip:8080/api/archiveTasks/generate
 ```
 
 #### （3）执行归档任务
 - 方式一：归档任务执行器，会定时自动执行（大约每5分钟检查一次任务列表）
-- 方式二：通过API手动出发执行
+- 方式二：通过API手动触发执行
 ```
 curl http://ip:8080/api/archiveTasks/execute
 ```
