@@ -2,11 +2,14 @@
 
 data-archive-tool 是一个基于pt-archiver之上，封装的通用数据归档工具。
 
-### data-archive-tool支持以下几种模式归档数据：
+## data-archive-tool能做什么？
 
-- ARCHIVE：归档后，删除原数据库的数据
-- DELETE： 只删除原数据库的数据，不进行归档
-- ARCHIVE_TO_FILE：将数据归档到文件中
+- 支持多个不同的数据源进行归档
+- 支持分布式事务（pt-archiver 自带）
+- 支持DB归档和文件归档和直接删除的归档策略
+- 支持自定义定时调度时间
+- 仅支持MySQL数据源归档
+
 
 ### data-archive-tool的架构图如下：
 
@@ -143,6 +146,8 @@ INSERT INTO `mysql_archiver`.`archive_config` (`id`, `source_host`, `source_port
 |charset     | 字符集，默认：UTF8
 |archive_condition |归档条件
 |exec_time_window_cron | 执行时间窗口，如：0 0 2 1 * ? *,表示在每月的1日的凌晨2点执行任务
+|extension_cmd | 归档扩展命令，可以自己加上特殊的pt-archiver命令
+|..... | 略去其他不相关字段
 
 #### （2）触发归档任务生成器，生成归档任务
 
