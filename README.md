@@ -33,7 +33,7 @@ data-archive-tool 是一个基于pt-archiver之上，封装的通用数据归档
 
 #### （1）下载Percona Toolkit:
 
-[Percona-Toolkit-3.4.0.rpm](https://www.notion.so/Linux-pt-archiver-a6b5450661bd4d87aea2ce209a7f5d2d#c585497698cb422c85d7cd1163c1fd4b)
+[Percona-Toolkit-3.4.0.rpm](https://downloads.percona.com/downloads/percona-toolkit/3.4.0/binary/redhat/7/x86_64/percona-toolkit-3.4.0-3.el7.x86_64.rpm)
 
 #### （2）安装前置依赖环境：
 
