@@ -41,13 +41,39 @@ data-archive-tool 是一个基于pt-archiver之上，封装的通用数据归档
 yum install -y perl-DBI perl-DBD-MySQL perl-Digest-MD5 perl-IO-Socket-SSL perl-TermReadKey
 ```
 
-#### （3）安装Percona Toolkit:
+#### （3）配置SSL.pm策略（如果使用默认的SSL_VERIFY_NONE策略，会导致同步失败）
 
+- 找到perl5的SSL.pm
+
+```
+cd /usr/share/perl5/vendor_perl/IO/Socket
+```
+
+- 编辑SSL.pm将 **SSL_VERIFY_NONE** 改成 **SSL_VERIFY_PEER**
+
+```
+vim SSL.pm
+
+# global defaults
+my %DEFAULT_SSL_ARGS = (
+    。。。。。。
+    SSL_verify_mode => SSL_VERIFY_PEER,
+);
+```
+
+#### （4）安装Percona Toolkit:
+
+- 安装Percona Toolkit
 ```
 rpm -ivh percona-toolkit-3.4.0-3.el7.x86_64.rpm
 ```
 
-#### （4）下载源码后使用Maven编译器进行编译：
+- 检查pt-archiver是否安装成功
+```
+pt-archiver --version
+```
+
+#### （5）下载源码后使用Maven编译器进行编译：
 
 ```
 mvn clean package
@@ -55,7 +81,7 @@ mvn clean package
 
 data-archive-tool/target中可以看到可运行的jar
 
-#### （5）初始化data-archive-tool的DB
+#### （6）初始化data-archive-tool的DB
 
 ```
 通过MySQL命令运行：data-archive-tool/db/mysql_archiver.sql
@@ -163,8 +189,6 @@ curl http://ip:8080/api/archiveTasks/generate
 ```
 curl http://ip:8080/api/archiveTasks/execute
 ```
-
-
 
 
 
