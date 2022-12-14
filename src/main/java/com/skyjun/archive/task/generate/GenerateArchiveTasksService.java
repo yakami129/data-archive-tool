@@ -45,11 +45,6 @@ public class GenerateArchiveTasksService {
         );
         archiveConfigs = LambdaUtil.filterToList(archiveConfigs, archiveConfigEntity -> {
 
-            // TODO TEST
-            if (true) {
-                return true;
-            }
-
             if (StringUtils.isBlank(archiveConfigEntity.getExecTimeWindowCron())) {
                 return false;
             }

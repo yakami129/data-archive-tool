@@ -20,8 +20,7 @@ public class GenerateArchiveTasksScheduling {
     /**
      * 每分钟执行一次，扫描归档配置，并且生成任务
      */
-    // TODO TEST
-    //@Scheduled(cron = "00 * * * * ? ")
+    @Scheduled(cron = "00 * * * * ? ")
     public void running() {
         log.info("[BIZ] >>>>>>>>>>>>>>>> 开始生成归档任务");
         generateArchiveTasksService.generateArchiveTasks();
